@@ -9,10 +9,14 @@ type Props = {
   state: State; mode: string; started: boolean; done: string[]; gateway?: string;
   runStep: (s: any) => void; sendText: (t: string) => void;
   approve: (id: string, ok: boolean, note?: string) => void; pay: (linkId: string) => void;
+  auto: boolean; setAuto: (on: boolean) => void; playAgain: () => void;
 };
 
+// Autoplay pacing: time to read each moment before the next click happens on its own.
+const AUTO = { firstStep: 500, nextStep: 2800, afterSkip: 1800, press: 1500, approve: 450, openPay: 1500, submitPay: 1600 };
+
 const FWD = /^\[Forwarded from ([^,\]]+),?\s*([^\]]*)\]\n?([\s\S]*)$/;
-const clean = (t: string) => t.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#+\s/gm, "");
+export const clean = (t: string) => t.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#+\s/gm, "");
 
 // Keep the newest message in view without scrolling the whole page.
 function useStickToBottom<T extends HTMLElement>(dep: unknown) {
@@ -34,13 +38,36 @@ export default function ChatView(p: Props) {
     (p.state.waiting.next === "time_skip" ? next.kind === "time_skip" : p.state.waiting.next === "message" && next.kind !== "time_skip"));
   const canStep = !!next && !p.state.busy && !waitingForApproval && gateOpen;
   const waitingForPay = replay && p.state.waiting?.next === "payment_received";
+  const pendingCard = p.state.seller.find((c): c is Extract<SellerItem, { kind: "approval" }> => c.kind === "approval" && c.status === "pending");
+  const finished = script.length > 0 && p.done.length >= script.length && !p.state.busy && !pendingCard && !waitingForPay;
+  const [pressing, setPressing] = useState<string | null>(null);
+
+  // Autoplay: the same clicks a presenter would make, with time to read in between.
+  useEffect(() => {
+    if (!p.auto) return;
+    const timers: number[] = [];
+    const later = (ms: number, fn: () => void) => timers.push(window.setTimeout(fn, ms));
+    if (pendingCard) {
+      later(AUTO.press, () => setPressing(pendingCard.id));
+      later(AUTO.press + AUTO.approve, () => { setPressing(null); p.approve(pendingCard.id, true); });
+    } else if (canStep && next) {
+      const prev = script[script.indexOf(next) - 1];
+      later(p.done.length === 0 ? AUTO.firstStep : prev?.kind === "time_skip" ? AUTO.afterSkip : AUTO.nextStep, () => p.runStep(next));
+    } else if (finished) {
+      p.setAuto(false);
+    }
+    return () => timers.forEach(clearTimeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [p.auto, pendingCard?.id, canStep, next?.id, finished]);
+
+  const status = waitingForApproval ? "approve" : waitingForPay ? "pay" : p.state.busy ? "busy" : finished || (!next && script.length) ? "done" : "ready";
   return (
     <div className="chatview">
-      <StepBar script={script} done={p.done} next={next} canStep={canStep} runStep={p.runStep}
-        status={waitingForApproval ? "approve" : waitingForPay ? "pay" : p.state.busy ? "busy" : !next ? "done" : "ready"} />
+      <StepBar script={script} done={p.done} next={next} canStep={canStep} runStep={p.runStep} status={status}
+        auto={p.auto} setAuto={p.setAuto} playAgain={p.playAgain} />
       <div className="stage">
-        <SellerPhone {...p} waitingForApproval={waitingForApproval} />
-        <CustomerPhone state={p.state} pay={p.pay} gateway={p.gateway} mode={p.mode} waitingForPay={waitingForPay} />
+        <SellerPhone {...p} waitingForApproval={waitingForApproval} pressing={pressing} />
+        <CustomerPhone state={p.state} pay={p.pay} gateway={p.gateway} mode={p.mode} waitingForPay={waitingForPay} auto={p.auto} />
         <Trace state={p.state} />
       </div>
     </div>
@@ -61,6 +88,10 @@ function stepIcon(s: any) {
   return <IconChat size={15} />;
 }
 
+const AUTO_STATUS: Record<string, string> = {
+  ready: "Playing", busy: "RAY is working", approve: "Meera approves", pay: "The customer pays", done: "Demo complete",
+};
+
 const STATUS: Record<string, string> = {
   ready: "Tap the blue step",
   busy: "RAY is working",
@@ -69,8 +100,9 @@ const STATUS: Record<string, string> = {
   done: "Demo complete",
 };
 
-function StepBar({ script, done, next, canStep, runStep, status }:
-  { script: any[]; done: string[]; next: any; canStep: boolean; runStep: (s: any) => void; status: string }) {
+function StepBar({ script, done, next, canStep, runStep, status, auto, setAuto, playAgain }:
+  { script: any[]; done: string[]; next: any; canStep: boolean; runStep: (s: any) => void; status: string;
+    auto: boolean; setAuto: (on: boolean) => void; playAgain: () => void }) {
   return (
     <section className="stepbar" aria-label="Demo steps">
       <div className="stepbar-head">
@@ -94,17 +126,22 @@ function StepBar({ script, done, next, canStep, runStep, status }:
         })}
       </ol>
       <div className={`stepbar-status st-${status}`} role="status">
-        {status === "busy" && <span className="spinner" aria-hidden />}
+        {(status === "busy" || (auto && status !== "done")) && <span className="spinner" aria-hidden />}
         {status === "done" && <IconCheck size={15} />}
-        {STATUS[status]}
+        {(auto ? AUTO_STATUS : STATUS)[status]}
       </div>
+      {status === "done"
+        ? <button className="btn-secondary play-btn" onClick={playAgain}><IconPlay size={12} />Play again</button>
+        : auto
+          ? <button className="btn-secondary play-btn" onClick={() => setAuto(false)}><span className="pause-icon" aria-hidden />Pause</button>
+          : <button className="btn-primary play-btn" onClick={() => setAuto(true)}><IconPlay size={12} />Play all</button>}
     </section>
   );
 }
 
 // ------------------------------------------------------------------ phone frame
 
-function StatusBar() {
+export function StatusBar() {
   return (
     <div className="statusbar" aria-hidden>
       <span>9:41</span>
@@ -119,7 +156,7 @@ function StatusBar() {
 
 // ------------------------------------------------------------------ Meera's phone
 
-function SellerPhone({ state, mode, sendText, approve, waitingForApproval }: Props & { waitingForApproval: boolean }) {
+function SellerPhone({ state, mode, sendText, approve, waitingForApproval, pressing }: Props & { waitingForApproval: boolean; pressing: string | null }) {
   const [text, setText] = useState("");
   const chat = useStickToBottom<HTMLDivElement>(`${state.seller.length}-${state.busy}`);
   const replay = mode === "replay";
@@ -141,7 +178,7 @@ function SellerPhone({ state, mode, sendText, approve, waitingForApproval }: Pro
           {state.seller.length === 0 && (
             <div className="wa-sys">Meera sells cupcakes from her home kitchen through Instagram DMs and WhatsApp. No website. Start the demo with the first step above.</div>
           )}
-          {state.seller.map((m, i) => <SellerBubble key={i} m={m} approve={approve} replay={replay} />)}
+          {state.seller.map((m, i) => <SellerBubble key={i} m={m} approve={approve} replay={replay} pressing={pressing} />)}
           {state.busy && !waitingForApproval && <div className="typing" aria-label="RAY is working"><span /><span /><span /></div>}
         </div>
         <form className="wa-composer" onSubmit={(e) => { e.preventDefault(); if (text.trim()) { sendText(text.trim()); setText(""); } }}>
@@ -154,7 +191,7 @@ function SellerPhone({ state, mode, sendText, approve, waitingForApproval }: Pro
   );
 }
 
-function SellerBubble({ m, approve, replay }: { m: SellerItem; approve: Props["approve"]; replay: boolean }) {
+export function SellerBubble({ m, approve, replay, pressing }: { m: SellerItem; approve: Props["approve"]; replay: boolean; pressing?: string | null }) {
   if (m.kind === "skip") {
     return (
       <div className="skip">
@@ -185,10 +222,10 @@ function SellerBubble({ m, approve, replay }: { m: SellerItem; approve: Props["a
       </div>
     );
   }
-  return <ApprovalCard m={m} approve={approve} replay={replay} />;
+  return <ApprovalCard m={m} approve={approve} replay={replay} pressing={pressing === m.id} />;
 }
 
-function ApprovalCard({ m, approve, replay }: { m: Extract<SellerItem, { kind: "approval" }>; approve: Props["approve"]; replay: boolean }) {
+function ApprovalCard({ m, approve, replay, pressing }: { m: Extract<SellerItem, { kind: "approval" }>; approve: Props["approve"]; replay: boolean; pressing?: boolean }) {
   const d = m.detail || {};
   const title: Record<string, string> = {
     publish_shop: "Publish your shop?", send_payment_link: `Send payment link to ${d.quote?.customer ?? "customer"}?`,
@@ -234,7 +271,7 @@ function ApprovalCard({ m, approve, replay }: { m: Extract<SellerItem, { kind: "
       )}
       {m.status === "pending" ? (
         <div className="approval-actions">
-          <button className="btn-primary" onClick={() => approve(m.id, true)}>{ok[m.tool] ?? "Approve"}</button>
+          <button className={`btn-primary ${pressing ? "pressing" : ""}`} onClick={() => approve(m.id, true)}>{ok[m.tool] ?? "Approve"}</button>
           {!replay && <button className="btn-secondary" onClick={() => approve(m.id, false, "Not now")}>Not now</button>}
         </div>
       ) : <div className="approval-done">{m.status === "approved" ? `You approved: ${APPROVAL_LABEL[m.tool]}` : "You said not now"}</div>}
@@ -244,8 +281,8 @@ function ApprovalCard({ m, approve, replay }: { m: Extract<SellerItem, { kind: "
 
 // ------------------------------------------------------------------ customer's phone
 
-function CustomerPhone({ state, pay, gateway, mode, waitingForPay }:
-  { state: State; pay: (id: string) => void; gateway?: string; mode: string; waitingForPay: boolean }) {
+function CustomerPhone({ state, pay, gateway, mode, waitingForPay, auto }:
+  { state: State; pay: (id: string) => void; gateway?: string; mode: string; waitingForPay: boolean; auto: boolean }) {
   const names = Object.keys(state.chats).filter((n) => state.chats[n].length);
   const [pick, setPick] = useState<string | null>(null);
   const [checkout, setCheckout] = useState<{ id: string; amount: number; customer: string } | null>(null);
@@ -262,6 +299,14 @@ function CustomerPhone({ state, pay, gateway, mode, waitingForPay }:
     if (realLinks && /^https?:/.test(link.url)) window.open(link.url, "_blank", "noopener");
     else setCheckout({ id: link.id, amount: link.amount, customer: who ?? "" });
   };
+  // Autoplay: the customer opens the newest unpaid link and pays it.
+  const due = [...msgs].reverse().find((m) => m.link && !paidLinks.has(m.link.id))?.link;
+  useEffect(() => {
+    if (!auto || !waitingForPay || !payable || checkout || !due) return;
+    const t = window.setTimeout(() => setCheckout({ id: due.id, amount: due.amount, customer: who ?? "" }), AUTO.openPay);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [auto, waitingForPay, payable, checkout, due?.id]);
   return (
     <section className="device-col" aria-label="Customer's chat with Meera's Bakes">
       <div className="device-cap">
@@ -289,21 +334,11 @@ function CustomerPhone({ state, pay, gateway, mode, waitingForPay }:
               {m.images?.map((id) => <img key={id} src={imageUrl(id)} alt="" className="att" />)}
               <div>{clean(m.text)}</div>
               {m.link && (
-                <div className={`rzp-link ${paidLinks.has(m.link.id) ? "is-paid" : ""}`}>
-                  <div className="rzp-link-head">
-                    <span className="rzp-word">Razorpay</span>
-                    <span className="rzp-tag">{realLinks ? "Test mode" : "Mock link"}</span>
-                  </div>
-                  <div className="rzp-link-body">
-                    <span>Meera's Bakes</span>
-                    <b>{inr(m.link.amount)}</b>
-                  </div>
-                  {paidLinks.has(m.link.id)
-                    ? <div className="rzp-paid"><IconCheck size={15} />Paid</div>
-                    : <button className={`rzp-pay ${payable && waitingForPay ? "attn" : ""}`} onClick={() => open(m.link!)}
-                        disabled={!payable} title={payable ? undefined : "This customer doesn't pay in the recorded demo"}>
-                        Pay {inr(m.link.amount)}</button>}
-                </div>
+                <PayLinkCard amount={m.link.amount} paid={paidLinks.has(m.link.id)} tag={realLinks ? "Test mode" : "Mock link"}>
+                  <button className={`rzp-pay ${payable && waitingForPay ? "attn" : ""}`} onClick={() => open(m.link!)}
+                    disabled={!payable} title={payable ? undefined : "This customer doesn't pay in the recorded demo"}>
+                    Pay {inr(m.link.amount)}</button>
+                </PayLinkCard>
               )}
               {m.from === "customer" && <span className="ticks" aria-hidden>✓✓</span>}
             </div>
@@ -313,18 +348,43 @@ function CustomerPhone({ state, pay, gateway, mode, waitingForPay }:
           <input aria-label="Customer message" disabled placeholder="Message" />
           <button type="button" disabled aria-label="Send"><IconSend size={18} /></button>
         </div>
-        {checkout && <Checkout {...checkout} onPaid={() => pay(checkout.id)} onClose={() => setCheckout(null)} />}
+        {checkout && <Checkout {...checkout} auto={auto} onPaid={() => pay(checkout.id)} onClose={() => setCheckout(null)} />}
       </div>
     </section>
   );
 }
 
+// A Razorpay payment link as it previews in the customer's WhatsApp.
+export function PayLinkCard({ amount, paid, tag, children }: { amount: number; paid: boolean; tag: string; children?: React.ReactNode }) {
+  return (
+    <div className={`rzp-link ${paid ? "is-paid" : ""}`}>
+      <div className="rzp-link-head">
+        <span className="rzp-word">Razorpay</span>
+        <span className="rzp-tag">{tag}</span>
+      </div>
+      <div className="rzp-link-body">
+        <span>Meera's Bakes</span>
+        <b>{inr(amount)}</b>
+      </div>
+      {paid ? <div className="rzp-paid"><IconCheck size={15} />Paid</div> : children}
+    </div>
+  );
+}
+
 // A mock of Razorpay's mobile checkout, clearly marked as a test. It never touches real money.
-function Checkout({ amount, customer, onPaid, onClose }: { id: string; amount: number; customer: string; onPaid: () => void; onClose: () => void }) {
+function Checkout({ amount, customer, onPaid, onClose, auto }: { id: string; amount: number; customer: string; onPaid: () => void; onClose: () => void; auto?: boolean }) {
   const [stage, setStage] = useState<"options" | "processing" | "success">("options");
   const [method, setMethod] = useState("upi");
   const timers = useRef<number[]>([]);
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
+  const [pressingPay, setPressingPay] = useState(false);
+  useEffect(() => {
+    if (!auto) return;
+    const a = window.setTimeout(() => setPressingPay(true), AUTO.submitPay - 400);
+    const b = window.setTimeout(() => submit(), AUTO.submitPay);
+    return () => { clearTimeout(a); clearTimeout(b); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const submit = () => {
     setStage("processing");
     timers.current.push(window.setTimeout(() => { onPaid(); setStage("success"); }, 1300));
@@ -368,7 +428,7 @@ function Checkout({ amount, customer, onPaid, onClose }: { id: string; amount: n
               ))}
             </div>
           )}
-          <button className="co-pay" onClick={submit}>Pay {inr(amount)}</button>
+          <button className={`co-pay ${pressingPay ? "pressing" : ""}`} onClick={submit}>Pay {inr(amount)}</button>
           <div className="co-secure"><IconLock size={12} />Secured by Razorpay</div>
         </div>
       )}
@@ -393,7 +453,7 @@ function Checkout({ amount, customer, onPaid, onClose }: { id: string; amount: n
 
 // ------------------------------------------------------------------ trace
 
-const THREADS: [string, string, (p: { size?: number }) => JSX.Element][] = [
+export const THREADS: [string, string, (p: { size?: number }) => JSX.Element][] = [
   ["docs", "Photos and menu", IconCamera], ["rules", "Rules, no AI", IconShield], ["razorpay", "Razorpay", IconCard],
   ["shopify", "To customers", IconSend], ["ray", "To Meera", IconChat],
 ];
@@ -434,7 +494,7 @@ function Trace({ state }: { state: State }) {
   );
 }
 
-function Row({ it }: { it: TraceItem }) {
+export function Row({ it }: { it: TraceItem }) {
   const [open, setOpen] = useState(false);
   const time = <span className="tr-time">{it.t.toFixed(1)}s</span>;
   if (it.kind === "note") {

@@ -1,13 +1,15 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
-import { Ev, STATIC, initial, niceDate, reduce } from "./state";
+import { Ev, Moment, STATIC, State, buildStory, initial, niceDate, parseJsonl, reduce } from "./state";
 import { LocalReplay } from "./replay";
 import ChatView from "./views/ChatView";
 import OrdersView from "./views/OrdersView";
 import GrowthView from "./views/GrowthView";
-import { IconChat, IconGrowth, IconOrders, IconRestart, RayMark } from "./Icons";
+import Overview from "./views/Overview";
+import HowItWorks from "./views/HowItWorks";
+import { IconBolt, IconChat, IconGrowth, IconOrders, IconRestart, RayMark } from "./Icons";
 
 type Mode = "live" | "replay" | "scripted";
-type Tab = "chat" | "orders" | "growth";
+type Tab = "overview" | "demo" | "orders" | "growth" | "how";
 
 const INITIAL_URL = STATIC ? "/static/initial.json" : "/api/initial";
 const getJson = (url: string) => fetch(url).then((r) => { if (!r.ok) throw new Error(`${url}: ${r.status}`); return r.json(); });
@@ -20,14 +22,35 @@ async function post(path: string, body: unknown = {}) {
 
 const BADGE: Record<Mode, string> = { live: "Live agent", replay: "Replay of a live run", scripted: "Scripted, no AI" };
 
+const IconHome = (p: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={p.size ?? 18} height={p.size ?? 18} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <path d="M4 10.5L12 4l8 6.5V20H4z" /><path d="M10 20v-5h4v5" />
+  </svg>
+);
+const IconBook = (p: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={p.size ?? 18} height={p.size ?? 18} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z" />
+  </svg>
+);
+
 const PAGES: { id: Tab; label: string; icon: (p: { size?: number }) => JSX.Element; title: string; sub: string }[] = [
-  { id: "chat", label: "On WhatsApp", icon: IconChat, title: "Meera's shop on WhatsApp",
-    sub: "AI reads and writes. Code does the money. Meera approves." },
+  { id: "overview", label: "Overview", icon: IconHome, title: "Overview",
+    sub: "Everything RAY did for Meera's Bakes, and what it means for Razorpay." },
+  { id: "demo", label: "Try it live", icon: IconChat, title: "Try it live",
+    sub: "Play the recorded run step by step. Claude reads and writes, code does the money, Meera approves." },
   { id: "orders", label: "Orders & shop", icon: IconOrders, title: "Orders and shop",
-    sub: "Every order, payment and screenshot check RAY has handled." },
+    sub: "Every order, payment link and screenshot check RAY has handled." },
   { id: "growth", label: "Growth", icon: IconGrowth, title: "Growing with Razorpay",
-    sub: "Each next product unlocks from Meera's own sales history." },
+    sub: "Each next Razorpay product unlocks from Meera's own sales history." },
+  { id: "how", label: "How it works", icon: IconBook, title: "How it works",
+    sub: "The idea, where AI is used, and what is real in this prototype." },
 ];
+const OTHER_NAV = ["Home", "Transactions", "Settlements", "Reports"];
+const PRODUCTS = ["Payment Links", "Payment Pages", "Razorpay.me Link", "Invoices", "Magic Checkout", "Subscriptions", "QR Codes"];
+const tabFromHash = (): Tab => {
+  const h = location.hash.replace(/^#\/?/, "");
+  return (PAGES.some((x) => x.id === h) ? h : "overview") as Tab;
+};
 
 export default function App() {
   const params = new URLSearchParams(location.search);
@@ -35,11 +58,23 @@ export default function App() {
   const [mode, setMode] = useState<Mode>((params.get("mode") as Mode) || "replay");
   const [sid, setSid] = useState<string | null>(null);
   const [state, dispatch] = useReducer(reduce, initial);
-  const [tab, setTab] = useState<Tab>("chat");
+  const [tab, setTabState] = useState<Tab>(tabFromHash);
+  const [story, setStory] = useState<{ final: State; moments: Moment[] } | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState<string[]>([]);
+  const [auto, setAuto] = useState(false);
   const es = useRef<EventSource | null>(null);
   const local = useRef<LocalReplay | null>(null);
+
+  const setTab = useCallback((t: Tab) => { setTabState(t); history.replaceState(null, "", `#${t}`); }, []);
+  useEffect(() => {
+    const onHash = () => setTabState(tabFromHash());
+    window.addEventListener("hashchange", onHash);
+    // The recorded run, played instantly, gives the overview, orders and growth their finished numbers.
+    fetch("/static/demo.jsonl").then((r) => r.text()).then((t) => setStory(buildStory(parseJsonl(t))))
+      .catch(() => setError("Could not load the recorded run."));
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   useEffect(() => {
     if (STATIC) {
@@ -104,71 +139,85 @@ export default function App() {
     if (sid) await post(`/api/sessions/${sid}/pay/${linkId}`).catch((e) => setError(e.message));
   }, [sid]);
 
-  const restart = () => { es.current?.close(); local.current?.stop(); local.current = null; setSid(null); setDone([]); dispatch({ type: "__reset" } as Ev);
+  const restart = () => { setAuto(false); es.current?.close(); local.current?.stop(); local.current = null; setSid(null); setDone([]); dispatch({ type: "__reset" } as Ev);
     getJson(INITIAL_URL).then((v) => dispatch({ type: "snapshot", view: v, t: 0, seq: -1, mode: "init" })).catch((e) => setError(e.message)); };
 
   const pending = state.seller.some((c) => c.kind === "approval" && c.status === "pending");
 
   const page = PAGES.find((x) => x.id === tab)!;
   const day = state.phase === "onboarding" ? "Day 1" : niceDate(state.today);
+  // Before a step-by-step run starts, the dashboards show the shop as the recorded run left it.
+  const shown = sid || !story ? state : story.final;
+  const playAgain = () => { restart(); setAuto(true); };
+  // "play" opens the demo and runs it hands-free, from the start.
+  const go = (t: string) => {
+    if (t === "play") { setTab("demo"); if (sid) playAgain(); else setAuto(true); return; }
+    setTab(t as Tab);
+  };
 
   return (
     <div className="app">
-      <aside className="sidebar">
-        <div className="brand">
-          <RayMark />
-          <div className="brand-text">
-            <span className="brand-name">RAY Shop</span>
-            <span className="brand-sub">on Razorpay</span>
-          </div>
-        </div>
-        <div className="merchant" title="Meera's Bakes, a fictional home bakery">
-          <span className="merchant-logo" aria-hidden>MB</span>
-          <span className="merchant-text"><b>Meera's Bakes</b><small>Home bakery, Bengaluru</small></span>
-        </div>
-        <nav className="nav" role="tablist" aria-label="Sections">
-          {PAGES.map(({ id, label, icon: Icon }) => (
-            <button key={id} role="tab" aria-selected={tab === id} className={tab === id ? "nav-item on" : "nav-item"}
-              onClick={() => setTab(id)} title={label}>
-              <Icon size={19} />
-              <span className="nav-label">{label}</span>
-              {id === "chat" && pending && <span className="nav-dot" aria-label="approval waiting" />}
-            </button>
-          ))}
+      <header className="rzp-top">
+        <div className="rzp-brand"><RayMark size={22} /><span className="rzp-word">Razorpay</span></div>
+        <nav className="rzp-products" aria-label="Razorpay">
+          <span className="rzp-prod off" title="Not part of this demo"><IconHome size={16} />Razorpay Home</span>
+          <span className="rzp-prod on"><IconOrders size={16} />Payments</span>
+          <span className="rzp-prod off" title="Not part of this demo">More<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6" /></svg></span>
         </nav>
-        <div className="sidebar-foot">
-          <span className="foot-pill">Prototype</span>
-          <p>All data is synthetic. Meera, her customers and orders are fictional.</p>
+        <div className="rzp-right">
+          <span className="rzp-test"><span className="mode-dot" />Test mode</span>
+          <span className="rzp-search" aria-hidden><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>Search payment products, settings, and more</span>
+          <span className="rzp-avatar" title="Meera's Bakes">MB</span>
         </div>
-      </aside>
-      <div className="workspace">
-        <header className="topbar">
-          <div className="page-head">
-            <h1>{page.title}</h1>
-            <p>{page.sub}</p>
-          </div>
-          <div className="top-actions">
-            <span className="day-pill">{day}</span>
-            {!sid ? (
-              <label className="mode-select">
-                <span className={`mode-dot mode-${mode}`} aria-hidden />
-                <select aria-label="Run mode" value={mode} onChange={(e) => setMode(e.target.value as Mode)}>
-                  <option value="replay">Replay of a live run</option>
-                  <option value="live" disabled={health && !health.live_available}>Live agent{health?.static ? " (run locally)" : health && !health.live_available ? " (needs API key)" : ""}</option>
-                  <option value="scripted" disabled={!!health?.static}>Scripted, no AI{health?.static ? " (run locally)" : ""}</option>
-                </select>
-              </label>
-            ) : <span className={`mode-badge mode-${mode}`}><span className="mode-dot" aria-hidden />{BADGE[mode]}</span>}
-            {sid && <button className="btn-secondary" onClick={restart}><IconRestart size={15} />Restart</button>}
-          </div>
-        </header>
-        {error && <div className="banner" role="alert">{error}</div>}
-        <main key={tab}>
-          {tab === "chat" && <ChatView state={state} mode={mode} started={!!sid} done={done} runStep={runStep} sendText={sendText}
-            approve={approve} pay={pay} gateway={health?.gateway} />}
-          {tab === "orders" && <OrdersView state={state} />}
-          {tab === "growth" && <GrowthView state={state} />}
-        </main>
+      </header>
+      <div className="frame">
+        <aside className="sidebar">
+          {OTHER_NAV.map((n, i) => <span key={n} className="nav-item off" title="Not part of this demo">{[<IconHome key="h" size={17} />, <IconBolt key="t" size={17} />, <IconGrowth key="s" size={17} />, <IconBook key="r" size={17} />][i]}{n}</span>)}
+          <div className="nav-label-row">Payment products</div>
+          <button className="nav-item on" onClick={() => setTab("overview")}><RayMark size={17} />RAY Shop<span className="nav-new">New</span>{pending && <span className="nav-dot" aria-label="approval waiting" />}</button>
+          {PRODUCTS.map((n) => <span key={n} className="nav-item off" title="Not part of this demo"><IconOrders size={17} />{n}</span>)}
+        </aside>
+        <div className="workspace">
+          {error && <div className="banner" role="alert">{error}</div>}
+          <main key={tab}>
+            <div className={`page ${tab === "demo" ? "page-demo" : ""}`}>
+              <div className="page-bar">
+                <nav className="tabs" role="tablist" aria-label="RAY Shop">
+                  {PAGES.map(({ id, label }) => (
+                    <button key={id} role="tab" aria-selected={tab === id} className={tab === id ? "tab on" : "tab"} onClick={() => setTab(id)}>
+                      {label}{id === "demo" && pending && <span className="nav-dot" aria-label="approval waiting" />}
+                    </button>
+                  ))}
+                </nav>
+                {tab === "demo" ? (
+                  <div className="top-actions">
+                    <span className="day-pill">{day}</span>
+                    {!sid ? (
+                      <label className="mode-select">
+                        <span className={`mode-dot mode-${mode}`} aria-hidden />
+                        <select aria-label="Run mode" value={mode} onChange={(e) => setMode(e.target.value as Mode)}>
+                          <option value="replay">Replay of a live run</option>
+                          <option value="live" disabled={health && !health.live_available}>Live agent{health?.static ? " (run locally)" : health && !health.live_available ? " (needs API key)" : ""}</option>
+                          <option value="scripted" disabled={!!health?.static}>Scripted, no AI{health?.static ? " (run locally)" : ""}</option>
+                        </select>
+                      </label>
+                    ) : <span className={`mode-badge mode-${mode}`}><span className="mode-dot" aria-hidden />{BADGE[mode]}</span>}
+                    {sid && <button className="btn-secondary" onClick={restart}><IconRestart size={15} />Restart</button>}
+                  </div>
+                ) : <span className="demo-note">Demo account. Meera's Bakes and every payment here are made up.</span>}
+              </div>
+              {tab !== "overview" && (
+                <div className="page-head"><div><h1>{page.title}</h1><p>{page.sub}</p></div></div>
+              )}
+              {tab === "overview" && <Overview story={story} go={go} />}
+              {tab === "demo" && <ChatView state={state} mode={mode} started={!!sid} done={done} runStep={runStep} sendText={sendText}
+                approve={approve} pay={pay} gateway={health?.gateway} auto={auto} setAuto={setAuto} playAgain={playAgain} />}
+              {tab === "orders" && <OrdersView state={shown} />}
+              {tab === "growth" && <GrowthView state={shown} />}
+              {tab === "how" && <HowItWorks go={go} />}
+            </div>
+          </main>
+        </div>
       </div>
     </div>
   );

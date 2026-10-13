@@ -42,7 +42,6 @@ export default function GrowthView({ state }: { state: State }) {
 
   const bars = series.map((m) => ({ ...m, value: m.month === cur ? g.this_month_run_rate : m.sales, projected: m.month === cur }));
   const max = Math.max(...bars.map((b) => b.value), 100000) * 1.12;
-  const fakes = state.checks.filter((c) => !c.safe_to_start).length;
   const W = 560, H = 240, top = 20, base = 200, bw = 64;
   const y = (v: number) => base - (v / max) * (base - top);
   const step = (W - 60) / bars.length;
@@ -74,14 +73,12 @@ export default function GrowthView({ state }: { state: State }) {
         </ol>
       </section>
 
-      <div className="kpis six">
-        <div className="kpi"><dt>This month, at current pace</dt><dd>{inr(g.this_month_run_rate)}</dd><small>{inr(g.this_month_so_far)} so far</small></div>
-        <div className="kpi"><dt>Growth last month</dt><dd className="good">{g.growth_last_month_pct != null ? `+${g.growth_last_month_pct}%` : "-"}</dd><small>{full.length >= 2 ? `${MONTH[Number(full[full.length - 1].month.slice(5)) - 1]} over ${MONTH[Number(full[full.length - 2].month.slice(5)) - 1]}` : "last full month"}</small></div>
-        <div className="kpi"><dt>Repeat customers</dt><dd>{g.repeat_customers}<span className="of"> of {g.customers}</span></dd><small>3 or more orders</small></div>
-        <div className="kpi"><dt>Paid after a reminder</dt><dd>{inr(g.collected_after_reminder)}</dd><small>{g.orders_paid_after_reminder} orders</small></div>
-        <div className="kpi"><dt>Fake screenshots caught</dt><dd className={fakes ? "bad" : ""}>{fakes}</dd><small>this session</small></div>
-        <div className="kpi"><dt>Payments confirmed by Razorpay</dt><dd>{state.paidCount}</dd><small>this session</small></div>
-      </div>
+      <section className="pcard stats4">
+        <div><b>{inr(g.this_month_run_rate)}</b><span>October, at current pace</span></div>
+        <div><b>{g.growth_last_month_pct != null ? `+${g.growth_last_month_pct}%` : "-"}</b><span>sales growth, {full.length >= 2 ? `${MONTH[Number(full[full.length - 1].month.slice(5)) - 1]} over ${MONTH[Number(full[full.length - 2].month.slice(5)) - 1]}` : "last month"}</span></div>
+        <div><b>{g.repeat_customers}<small> of {g.customers}</small></b><span>repeat customers</span></div>
+        <div><b>{inr(g.collected_after_reminder)}</b><span>paid after a reminder</span></div>
+      </section>
 
       <div className="growth-grid">
         <section className="card">

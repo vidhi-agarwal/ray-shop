@@ -114,3 +114,30 @@ How I checked it:
 
 **Known gaps (unchanged)**
 - Three wording slips live in the recorded AI text and need a new live run to fix: Riya called unpaid in a trace note after she paid, a half-Devanagari word, and "Biscuit" for "Biscoff".
+
+### 2026-10-13, late evening: Claude Code (desktop), fewer clicks, Razorpay Dashboard frame
+
+**What Vidhi asked:** make it as neat as a reference prototype (razorpay-blindspot.vercel.app) and show the Razorpay-relevant parts right away, since the demo took too many clicks.
+
+**What changed**
+- New landing page, Overview: Razorpay KPIs (collected on Razorpay, October pace, paid after reminders, fake screenshots caught) and the six moments of the recorded run. Picking a moment shows it finished on Meera's phone and the customer's phone side by side, with what happened behind it. No clicks to see value, one per moment (it was about 14 to reach the payment).
+- The recorded run is played instantly through the same reducer (`buildStory` in `state.ts`), so Orders and Growth open populated instead of empty on day 1.
+- "How it works" page: five steps, where AI is used and where it is not, guardrails, prototype versus production. Claims are taken from the README and this log.
+- Shell styled like the Razorpay Dashboard: dark top bar, light grouped nav, demo-account strip, light activity panel. The step-by-step demo stays as "Live on WhatsApp", and each page has its own link (#overview, #demo, #orders, #growth, #how).
+
+**How it was checked**
+- 13 tests pass, TypeScript build clean.
+- All six moments clicked at 1440x900; step-by-step demo run end to end (27 steps, $0.86) on the server build; Overview checked on the static build and at 375px.
+
+### 2026-10-13, night: Claude Code (desktop), match Razorpay's dashboard, less clutter
+
+**What Vidhi said:** it did not look quite like Razorpay and was still cluttered; she shared a screenshot of the real dashboard (Magic Checkout page).
+
+**What changed**
+- Measured the reference prototype's styles (it is built on Razorpay's Blade): Razorpay blue #1364F1, TASA Orbiter 600 headings, Inter 14px body, muted #616D75, hairline-border card shadow. Matched them in CSS rather than adding Blade as a dependency.
+- Shell copied from the screenshot: black top bar (Razorpay Home, Payments, More, search), content in a rounded panel, quiet white side nav with RAY Shop under Payment Products, and page tabs.
+- Overview rebuilt as a Razorpay product page: hero card (pill, big heading with the product name in blue, three ticks, one wide blue button, product phone), a card of four big blue numbers, the six moments as a clean list with one phone and a Meera/customer toggle, and a four-step growth strip. The behind-the-scenes trace moved off the overview.
+- Coloured chips toned down to neutral grey tags; Growth's six tiles became one four-number card.
+
+**How it was checked:** 13 tests pass; every tab checked at 1440x900; step-by-step demo run end to end (27 steps, $0.86); Overview at 375px with no sideways scroll.
+- Autoplay (same session): "Try RAY Shop now" on the Overview, or "Play all" on the demo, runs the whole step-by-step demo hands-free in about 2 minutes. It presses each approval button visibly, opens and pays the mock checkout, and pauses between moments so they can be read. Pause and Play again are on the step bar; manual clicking still works. Checked: one click ran all 7 steps to "Demo complete" (27 steps, $0.86); Pause stops before the next step.

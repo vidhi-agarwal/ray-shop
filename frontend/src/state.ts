@@ -224,3 +224,51 @@ export function imageSrc(url: string): string {
   const m = /^\/api\/images\/([^/?#]+)$/.exec(url);
   return m ? imageUrl(m[1]) : url;
 }
+
+// ------------------------------------------------------------------ the recorded run, as finished moments
+
+export type Moment = {
+  id: string;                 // script step id: menu, riya, arjun, unpaid, diwali, kavya
+  seller: SellerItem[];       // what Meera saw in this moment
+  trace: TraceItem[];         // what RAY did behind it
+  customer?: string;          // the customer this moment was about
+  customerChat: ChatMsg[];    // that customer's chat at the end of the moment
+  broadcast?: any;            // the Diwali broadcast, if this moment sent one
+  events: Ev[];               // raw events, for amounts on the moment cards
+  after: State;               // the shop at the end of the moment
+};
+
+// Plays the whole recording through the reducer at once (approvals and the payment are in it),
+// so the overview can show every moment finished, with no clicking through.
+export function buildStory(events: Ev[]): { final: State; moments: Moment[] } {
+  let s = initial;
+  const moments: Moment[] = [];
+  const ids = ["menu", "riya", "arjun", "unpaid", "diwali", "kavya"];
+  let cur: { start: State; events: Ev[] } | null = null;
+  const close = () => {
+    if (!cur) return;
+    const id = ids[moments.length] ?? `m${moments.length}`;
+    const bcast = cur.events.find((e) => e.type === "broadcast")?.broadcast;
+    const fwd = cur.events.find((e) => e.type === "founder_message" && FWD.test(e.text));
+    const touched = cur.events.find((e) => e.type === "customer_message")?.customer ?? (fwd ? FWD.exec(fwd.text)![1].trim() : undefined);
+    moments.push({
+      id, seller: s.seller.slice(cur.start.seller.length).filter((x) => x.kind !== "skip"),
+      trace: s.trace.slice(cur.start.trace.length).filter((x) => !(x.kind === "event" && x.text.startsWith("Three months"))),
+      customer: touched, customerChat: touched ? s.chats[touched] ?? [] : [], broadcast: bcast, events: cur.events, after: s,
+    });
+    cur = null;
+  };
+  for (const e of events) {
+    if (e.type === "session") continue;
+    if (e.type === "founder_message") { close(); cur = { start: s, events: [] }; }
+    if (e.type === "time_skip") close();
+    s = reduce(s, e);
+    if (cur) cur.events.push(e);
+  }
+  close();
+  return { final: { ...s, busy: false, waiting: undefined }, moments };
+}
+
+export function parseJsonl(text: string): Ev[] {
+  return text.split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
+}
