@@ -2,6 +2,7 @@
 
 The hosted demo has no backend, so the browser replays the recorded run from these files:
   static/initial.json        the shop as a fresh session sees it (what /api/initial returns)
+  static/insights.json       menu and customer insights (what /api/insights returns)
   static/demo.jsonl          the recorded live run
   static/images/*            menu photo and payment screenshots
   shop/meeras-bakes.html     the shop page (served at /shop/meeras-bakes)
@@ -24,6 +25,7 @@ def main() -> None:
     static = OUT / "static"
     (static / "images").mkdir(parents=True, exist_ok=True)
     (static / "initial.json").write_text(json.dumps(st.view(), ensure_ascii=False, default=str), encoding="utf-8")
+    (static / "insights.json").write_text(json.dumps(Store(start_phase="month3").insights(), ensure_ascii=False), encoding="utf-8")
     shutil.copyfile(find_recording(None), static / "demo.jsonl")
     for im in st.images.values():
         shutil.copyfile(st.dir / im["file"], static / "images" / (st.dir / im["file"]).name)

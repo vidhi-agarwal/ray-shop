@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import math
 import re
-from datetime import date, datetime
+from datetime import date, timedelta, datetime
 from typing import Any
 
 
@@ -280,6 +280,120 @@ def growth(orders: list[dict], customers: list[dict], today: date, since: date) 
         steps.append({"id": s["id"], "product": s["product"], "when": s["when"], "ready": bool(s["test"](metrics))})
     metrics["next_steps"] = steps
     return metrics
+
+
+# ------------------------------------------------------------------ menu and customer insights
+
+# Thresholds for the menu advice. Rules, not AI, so the same history always gives the same advice.
+TREND_PCT = 25          # same days this month vs last month, beyond this counts as growing or slowing
+SMALL_SHARE_PCT = 5     # below this share of item revenue an item is small
+ADD_ON_PCT = 40         # if at least this share of an item's orders also had another item, it is an add-on
+
+
+def insights(orders: list[dict], catalogue: list[dict], today: date) -> dict:
+    """What sells, what earns, and what an order is worth, from paid orders.
+
+    Trends compare the same days of this month and last month (1 to yesterday), so a part month is fair.
+    """
+    paid = [o for o in orders if o["payment_status"] != "unpaid"]
+    cat = {c["sku"]: c for c in catalogue}
+    upto = today.day - 1 or 1
+    cur = today.strftime("%Y-%m")
+    prev_month = (today.replace(day=1) - timedelta(days=1)).strftime("%Y-%m")
+    rows: dict[str, dict] = {}
+    for o in paid:
+        day = int(o["placed_at"][8:10])
+        month = o["placed_at"][:7]
+        for li in o["lines"]:
+            c = cat.get(li["sku"])
+            if not c:
+                continue
+            r = rows.setdefault(li["sku"], {"sku": li["sku"], "name": c["name"], "units": 0, "revenue": 0, "orders": 0,
+                                            "with_other": 0, "last_period": 0, "this_period": 0, "seasonal": bool(c.get("seasonal"))})
+            unit = c["price"] + ((c.get("eggless_extra") or 0) if li.get("eggless") else 0)
+            r["units"] += li["qty"]
+            r["revenue"] += li["qty"] * unit
+            r["orders"] += 1
+            r["with_other"] += 1 if len(o["lines"]) > 1 else 0
+            if day <= upto and month == cur:
+                r["this_period"] += li["qty"]
+            if day <= upto and month == prev_month:
+                r["last_period"] += li["qty"]
+    items = sorted(rows.values(), key=lambda r: r["revenue"], reverse=True)
+    item_revenue = sum(r["revenue"] for r in items) or 1
+    top_units = max(items, key=lambda r: r["units"])["sku"] if items else None
+    top_revenue = items[0]["sku"] if items else None
+    by_units = [r["sku"] for r in sorted(items, key=lambda r: r["units"], reverse=True)]
+    drop, slowing = [], []
+    for rank, r in enumerate(items):
+        r["share_pct"] = round(r["revenue"] / item_revenue * 100, 1)
+        r["change_pct"] = round((r["this_period"] / r["last_period"] - 1) * 100) if r["last_period"] else None
+        r["add_on_pct"] = round(r["with_other"] / r["orders"] * 100) if r["orders"] else 0
+        tags, advice = [], ""
+        if r["sku"] == top_units:
+            tags.append("Best seller")
+        if r["sku"] == top_revenue:
+            tags.append("Most revenue")
+        growing = r["change_pct"] is not None and r["change_pct"] >= TREND_PCT
+        falling = r["change_pct"] is not None and r["change_pct"] <= -TREND_PCT
+        if r["seasonal"]:
+            tags.append("Seasonal")
+            advice = "Seasonal, too new to judge."
+        elif r["share_pct"] < SMALL_SHARE_PCT and (r["change_pct"] or 0) < 0:
+            tags.append("Consider dropping")
+            advice = "Few sales and falling. A candidate to take off the menu."
+            drop.append(r["name"])
+        elif falling:
+            tags.append("Slowing")
+            advice = "Fewer than the same days last month. Feature it in the next offer before dropping it."
+            slowing.append(r["name"])
+        elif r["share_pct"] < SMALL_SHARE_PCT and r["add_on_pct"] >= ADD_ON_PCT:
+            tags.append("Add-on")
+            advice = f"Small, but often added to another order ({r['add_on_pct']}% of the time){' and picking up' if growing else ''}. Keep it."
+        elif r["sku"] == top_units:
+            advice = "Sells the most. Keep oven slots for it."
+        elif by_units.index(r["sku"]) > rank:
+            advice = f"Sells fewer, earns more: {r['share_pct']:g}% of item revenue from {r['units']} sold."
+        elif growing:
+            advice = f"Up {r['change_pct']}% on the same days last month."
+        if growing and "Growing" not in tags and not r["seasonal"]:
+            tags.append("Growing")
+        r["tags"], r["advice"] = tags, advice
+    for c in catalogue:  # on the menu but no paid order yet
+        if c["sku"] in rows:
+            continue
+        if c.get("seasonal"):
+            items.append({"sku": c["sku"], "name": c["name"], "units": 0, "revenue": 0, "share_pct": 0, "change_pct": None,
+                          "tags": ["Seasonal"], "advice": "New for the season, no paid order yet. Too early to judge."})
+        else:
+            items.append({"sku": c["sku"], "name": c["name"], "units": 0, "revenue": 0, "share_pct": 0, "change_pct": None,
+                          "tags": ["Consider dropping"], "advice": "Not sold yet. A candidate to take off the menu."})
+            drop.append(c["name"])
+    counts: dict[str, int] = {}
+    for o in paid:
+        counts[o["customer_id"]] = counts.get(o["customer_id"], 0) + 1
+    repeat = [o for o in paid if counts[o["customer_id"]] >= 3]
+    occasional = [o for o in paid if counts[o["customer_id"]] < 3]
+    n_repeat = sum(1 for v in counts.values() if v >= 3)
+    n_occ = len(counts) - n_repeat
+    avg = lambda xs: round(sum(o["total"] for o in xs) / len(xs)) if xs else 0
+    if drop:
+        summary = f"Consider dropping: {', '.join(drop)}."
+    elif slowing:
+        summary = f"Nothing to drop yet. Watch {', '.join(slowing)}: slowing."
+    else:
+        summary = "Nothing to drop yet. Every item is holding up."
+    return {
+        "period": f"1 to {upto} {today.strftime('%b')} vs the same days of {date.fromisoformat(prev_month + '-01').strftime('%b')}",
+        "items": items, "summary": summary,
+        "item_revenue": sum(r["revenue"] for r in items), "delivery_fees": sum(o.get("delivery_fee", 0) for o in paid),
+        "orders": len(paid), "aov": avg(paid),
+        "customers": {"paying": len(counts), "repeat": n_repeat, "occasional": n_occ,
+                      "aov_repeat": avg(repeat), "aov_occasional": avg(occasional),
+                      "orders_per_repeat": round(len(repeat) / n_repeat, 1) if n_repeat else 0,
+                      "spend_repeat": round(sum(o["total"] for o in repeat) / n_repeat) if n_repeat else 0,
+                      "spend_occasional": round(sum(o["total"] for o in occasional) / n_occ) if n_occ else 0},
+    }
 
 
 # ------------------------------------------------------------------ money guard for messages

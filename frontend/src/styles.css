@@ -688,3 +688,55 @@ main { flex: 1; min-height: 0; overflow-y: auto; }
 }
 .stepbar-status.idle { display: none; }
 @media (max-width: 1500px) { .stepbar-head { display: none; } }
+/* growth insights */
+.insights { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr); gap: 16px; align-items: start; }
+.insights .card-head h2, .insights-side h2 { font-size: 18px; }
+.menu-card, .aov-card, .offer-card { padding: 22px 24px; }
+.menu-verdict { font-size: 14px; font-weight: 600; border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; }
+.menu-verdict.keep { background: var(--green-50); color: #067443; }
+.menu-verdict.drop { background: var(--red-50); color: var(--red); }
+.menu-table { display: flex; flex-direction: column; }
+.mt-row { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(120px, 1fr) 110px 80px; gap: 14px; align-items: start; padding: 12px 0; border-top: 1px solid var(--line-2); }
+.mt-head { font-size: 11.5px; font-weight: 600; color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; border-top: 0; padding-top: 0; }
+.mt-row .num { text-align: right; display: flex; flex-direction: column; align-items: flex-end; }
+.mt-item { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.mt-item b { font-size: 14px; font-weight: 600; }
+.mt-item small { font-size: 12.5px; color: var(--ink-3); line-height: 1.45; }
+.mt-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+.mtag { font-size: 11px; font-weight: 600; border-radius: 999px; padding: 1px 8px; }
+.t-blue { background: var(--blue-50); color: var(--blue); }
+.t-green { background: var(--green-50); color: #067443; }
+.t-amber { background: var(--amber-50); color: #8A5600; }
+.t-red { background: var(--red-50); color: var(--red); }
+.t-grey { background: rgba(67, 75, 81, .09); color: var(--ink-2); }
+.mt-sold { display: flex; align-items: center; gap: 8px; padding-top: 2px; }
+.mt-sold b { font-size: 13.5px; font-variant-numeric: tabular-nums; min-width: 28px; }
+.mt-bar { flex: 1; height: 8px; border-radius: 99px; background: var(--line-2); overflow: hidden; }
+.mt-bar span { display: block; height: 100%; border-radius: 99px; background: var(--blue); }
+.mt-row .num b { font-size: 14px; font-variant-numeric: tabular-nums; }
+.mt-row .num small { font-size: 12px; color: var(--ink-3); }
+.trend { font-size: 13px; font-weight: 600; color: var(--ink-3); padding-top: 2px; }
+.trend.up { color: #067443; } .trend.down { color: var(--red); }
+.menu-foot { font-size: 12.5px; color: var(--ink-3); margin-top: 10px; }
+.insights-side { display: flex; flex-direction: column; gap: 16px; }
+.aov-big { display: flex; flex-direction: column; margin: 10px 0 14px; }
+.aov-big b { font-family: var(--display); font-weight: 600; font-size: 36px; color: var(--blue); line-height: 1.1; }
+.aov-big span { font-size: 13.5px; color: var(--ink-3); }
+.aov-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.aov-table th { text-align: right; font-size: 11.5px; font-weight: 600; color: var(--ink-3); padding: 0 0 6px 8px; }
+.aov-table td { padding: 9px 0 9px 8px; border-top: 1px solid var(--line-2); text-align: right; font-variant-numeric: tabular-nums; vertical-align: top; }
+.aov-table td:first-child { text-align: left; padding-left: 0; }
+.aov-table td small { display: block; font-size: 11.5px; color: var(--ink-3); }
+.aov-note { font-size: 12.5px; color: var(--ink-3); margin-top: 10px; line-height: 1.5; }
+.funnel { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.funnel li { display: grid; grid-template-columns: 1fr auto; column-gap: 10px; border-radius: 10px; padding: 10px 12px; background: var(--blue-50); }
+.funnel li.muted { background: #F4F5F6; }
+.funnel span { font-size: 13px; color: var(--ink-2); }
+.funnel b { font-family: var(--display); font-weight: 600; font-size: 20px; grid-row: span 2; align-self: center; }
+.funnel small { font-size: 12px; color: var(--ink-3); }
+@media (max-width: 1180px) { .insights { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) {
+  .mt-row { grid-template-columns: minmax(0, 1fr) 90px; }
+  .mt-sold, .mt-head span:nth-child(2) { display: none; }
+  .mt-row .trend, .mt-head span:nth-child(4) { display: none; }
+}

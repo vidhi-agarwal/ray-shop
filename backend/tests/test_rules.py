@@ -109,3 +109,13 @@ def test_growth_steps(s):
     ready = {x["id"]: x["ready"] for x in g["next_steps"]}
     assert ready == {"website": True, "checkout": False, "capital": False}
     assert g["growth_last_month_pct"] == 21
+
+
+def test_menu_insights(s):
+    ins = s.insights()
+    items = {i["sku"]: i for i in ins["items"]}
+    assert "Best seller" in items["RV6"]["tags"] and "Most revenue" in items["RV6"]["tags"]
+    assert "Slowing" in items["CT6"]["tags"]                      # 15 boxes on 1-12 Sep, 10 on 1-12 Oct
+    assert "Add-on" in items["BCJ"]["tags"]                       # small, but usually bought with something else
+    assert ins["summary"].startswith("Nothing to drop yet")
+    assert ins["aov"] == round(sum(o["total"] for o in s.orders if o["payment_status"] != "unpaid") / ins["orders"])

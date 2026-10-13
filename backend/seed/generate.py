@@ -49,7 +49,7 @@ CATALOGUE = [
     {"sku": "EV6", "name": "Eggless vanilla bean cupcakes", "pack": "box of 6", "price": 450, "eggless_extra": 0, "units": 1},
     {"sku": "BCJ", "name": "Biscoff cheesecake jar", "pack": "1 jar", "price": 220, "eggless_extra": None, "units": 0.5},
     {"sku": "CC1", "name": "Classic chocolate cake", "pack": "1 kg", "price": 1100, "eggless_extra": 100, "units": 2},
-    {"sku": "DH", "name": "Diwali gift hamper", "pack": "6 cupcakes, 2 jars, diyas", "price": 1499, "eggless_extra": None, "units": 2},
+    {"sku": "DH", "name": "Diwali gift hamper", "pack": "6 cupcakes, 2 jars, diyas", "price": 1499, "eggless_extra": None, "units": 2, "seasonal": True},
 ]
 
 FIRST = ["Riya", "Arjun", "Sneha", "Kavya", "Aditi", "Rohan", "Ishaan", "Neha", "Tanya", "Vikram", "Pooja", "Karan",

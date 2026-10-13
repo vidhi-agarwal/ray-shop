@@ -386,6 +386,10 @@ class Store:
         return changed
 
     # ------------------------------------------------------------------ views
+    def insights(self) -> dict:
+        """Menu and customer insights from the full order history (rules, no AI)."""
+        return rules.insights(self.orders, self.truth["catalogue"], self.today)
+
     def view(self) -> dict:
         g = rules.growth(self.orders, self.customers, self.today, date.fromisoformat(self.merchant["on_rayshop_since"])) \
             if self.phase == "month3" else None

@@ -149,3 +149,18 @@ How I checked it:
 - **Click through yourself** button beside Try RAY Shop now, for manual play. The step bar's idle hint and counter are hidden on narrower screens so all seven steps fit next to Play all.
 - README: Live demo section with every link, how to play it both ways, and a Meet Meera section.
 - Checked: 13 tests pass; manual button opens the demo waiting for a tap; Play all fits the step bar with no overflow at 1440px; shop page shows the logo.
+
+### 2026-10-14: Claude Code (desktop), what sells, order value, offer result
+
+**What Vidhi asked:** show what sold most and least (so Meera can drop items), the biggest earner, average order value per customer, and how many the Diwali message reached versus how many paid. Check first whether each is worth showing.
+
+**What the data supported**
+- What sells and what earns: yes. Red velvet sells most (131 boxes, 34% of item revenue). Chocolate cake earns almost as much (31%) from fewer than half the sales. Biscoff jar is smallest (4.5%) but growing and bought with another item 52% of the time, so the rules do not suggest dropping it. Chocolate truffle is slowing (15 boxes on 1 to 12 Sep, 10 on 1 to 12 Oct).
+- Order value: yes. Average paid order Rs 1,037. Repeat customers spend a little less per order (Rs 1,007) but Rs 5,171 each over three months, against Rs 1,849 for occasional ones.
+- Offer reached versus paid: only partly. 27 sent, 10 skipped for consent are real. The recorded run ends the day it was sent and orders carry no source, so "paid" is shown as 0 with a note, not invented.
+
+**What changed**
+- `rules.insights`: per-item units, revenue, share, same-days trend, and rule-based tags and advice (best seller, most revenue, growing, slowing, add-on, seasonal, candidate to drop), plus order value by customer type. Served at `/api/insights` and exported to `static/insights.json` for Vercel.
+- The Diwali hamper is marked seasonal in the catalogue, so its unpaid first order does not make it a "candidate to drop". A new test caught that case.
+- Growth page: What's selling table with a one-line verdict, What an order is worth, and the Diwali offer funnel.
+- Checked: 14 tests pass; Growth page on the server and static builds.

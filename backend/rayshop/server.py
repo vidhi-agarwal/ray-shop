@@ -263,6 +263,12 @@ def initial() -> dict:
     return Store().view()
 
 
+@app.get("/api/insights")
+def insights() -> dict:
+    """What sells and what an order is worth, from Meera's three months of orders."""
+    return Store(start_phase="month3").insights()
+
+
 @app.get("/api/images/{image_id}")
 def image(image_id: str):
     st = Store()

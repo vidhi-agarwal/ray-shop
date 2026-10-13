@@ -17,7 +17,7 @@ Built for Razorpay's "Recover and Grow with AI" track. All data is synthetic: Me
 | [ray-shop.vercel.app/#overview](https://ray-shop.vercel.app/#overview) | RAY Shop as a Razorpay product page: the pitch, Meera's story, her numbers, and six moments you can open in one click each |
 | [ray-shop.vercel.app/#demo](https://ray-shop.vercel.app/#demo) | The full run on Meera's and her customer's phones, with what RAY does behind each step |
 | [ray-shop.vercel.app/#orders](https://ray-shop.vercel.app/#orders) | Orders, oven slots, screenshot checks and the shop page preview |
-| [ray-shop.vercel.app/#growth](https://ray-shop.vercel.app/#growth) | Her sales on Razorpay and the next Razorpay product she is ready for |
+| [ray-shop.vercel.app/#growth](https://ray-shop.vercel.app/#growth) | Her sales on Razorpay, what sells and what to drop, what an order is worth, how the Diwali offer did, and the next Razorpay product she is ready for |
 | [ray-shop.vercel.app/#how](https://ray-shop.vercel.app/#how) | How it works: where AI is used, the guardrails, prototype versus production |
 | [ray-shop.vercel.app/shop/meeras-bakes](https://ray-shop.vercel.app/shop/meeras-bakes) | Meera's shop page |
 
@@ -66,6 +66,7 @@ One persona on purpose: RAY Shop is for one kind of seller, a home business with
 | Is the screenshot real? | Rules compare it with what Razorpay recorded |
 | Payment link amount | Always the quote's amount; the model never passes an amount |
 | Growth readiness | Rules on sales history (thresholds are assumptions for Razorpay to set) |
+| Menu advice (best seller, slowing, candidate to drop), order value | Rules on paid orders (`rules.insights`) |
 | Messages to Meera and customers | Claude, checked by a money guard |
 | Anything a customer sees | Meera approves first |
 
