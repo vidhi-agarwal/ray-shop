@@ -141,3 +141,11 @@ How I checked it:
 
 **How it was checked:** 13 tests pass; every tab checked at 1440x900; step-by-step demo run end to end (27 steps, $0.86); Overview at 375px with no sideways scroll.
 - Autoplay (same session): "Try RAY Shop now" on the Overview, or "Play all" on the demo, runs the whole step-by-step demo hands-free in about 2 minutes. It presses each approval button visibly, opens and pays the mock checkout, and pauses between moments so they can be read. Pause and Play again are on the step bar; manual clicking still works. Checked: one click ran all 7 steps to "Demo complete" (27 steps, $0.86); Pause stops before the next step.
+
+### 2026-10-14: Claude Code (desktop), persona, manual play, README links
+
+- **Meet Meera** section on the Overview: a logo for Meera's Bakes (a cupcake mark, now used wherever "MB" was), who she is, how she sells today, before and after RAY Shop, her handwritten menu, and facts from the demo data (70 customers, 37 repeat; 223 paid orders since July, all through payment links; 12 boxes a day; delivery fees; her rules).
+- **Second persona: decided against.** RAY Shop targets one kind of seller (home businesses with no website). A second persona would need its own recorded AI run and would double the demo without a new Razorpay point. One line notes that the same flow fits tiffin services, saree resellers and candle makers.
+- **Click through yourself** button beside Try RAY Shop now, for manual play. The step bar's idle hint and counter are hidden on narrower screens so all seven steps fit next to Play all.
+- README: Live demo section with every link, how to play it both ways, and a Meet Meera section.
+- Checked: 13 tests pass; manual button opens the demo waiting for a tap; Play all fits the step bar with no overflow at 1440px; shop page shows the logo.

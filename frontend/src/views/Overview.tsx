@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { LADDER, Moment, State, inr, packLabel } from "../state";
-import { IconCamera, IconCard, IconCheck, IconClock, IconLock, IconSend, IconShield, IconWarn, RayMark } from "../Icons";
+import { LADDER, Moment, State, imageUrl, inr, packLabel } from "../state";
+import { IconCamera, IconCard, IconCheck, IconClock, IconLock, IconSend, IconShield, IconWarn, MeeraLogo, RayMark } from "../Icons";
 import { PayLinkCard, SellerBubble, StatusBar, clean } from "./ChatView";
 
 type Copy = { title: string; body: string; product: string; icon: (p: { size?: number }) => JSX.Element };
@@ -63,11 +63,16 @@ export default function Overview({ story, go }: { story: { final: State; moments
             <li><IconCheck size={18} />Fake "paid" screenshots are caught against Razorpay.</li>
             <li><IconCheck size={18} />She grows into Payment Pages, Checkout and Capital.</li>
           </ul>
-          <button className="btn-hero" onClick={() => go("play")}>Try RAY Shop now <span aria-hidden>→</span></button>
-          <div className="hero2-cap">Plays a real recorded run, hands-free <span>|</span> About 2 minutes</div>
+          <div className="hero2-ctas">
+            <button className="btn-hero" onClick={() => go("play")}>Try RAY Shop now <span aria-hidden>→</span></button>
+            <button className="btn-manual" onClick={() => go("manual")}>Click through yourself</button>
+          </div>
+          <div className="hero2-cap">Plays hands-free in about 2 minutes <span>|</span> or tap each step yourself</div>
         </div>
         <div className="hero2-art">{riya && <HeroPhone m={riya} final={final} />}</div>
       </section>
+
+      <Persona final={final} />
 
       <section className="pcard stats4">
         <div><b>{lakh(collected)}</b><span>collected on Razorpay in 3 months</span></div>
@@ -128,6 +133,78 @@ export default function Overview({ story, go }: { story: { final: State; moments
   );
 }
 
+// Who Meera is. Every number here comes from the demo data; the bakery and its customers are made up.
+function Persona({ final }: { final: State }) {
+  const merchant = final.view?.merchant ?? {};
+  const pol = merchant.policies ?? {};
+  const zones: { name: string; fee: number; areas: string[] }[] = merchant.delivery_zones ?? [];
+  const g = final.growth ?? {};
+  const cat = final.catalogue ?? [];
+  const from = cat.length ? Math.min(...cat.map((c) => c.price)) : 0;
+  const since = merchant.selling_since ? new Date(merchant.selling_since + "-01").toLocaleDateString("en-IN", { month: "short", year: "numeric" }) : "";
+  const facts: [string, string, string?][] = [
+    ["Customers", `${g.customers ?? 0}`, `${g.repeat_customers ?? 0} order again and again`],
+    ["Orders since July", `${g.orders_total ?? 0}`, "paid, all on Razorpay links"],
+    ["Menu", `${cat.length} items`, `from ${inr(from)}, eggless on request`],
+    ["Oven", `${pol.daily_capacity_units ?? 0} boxes a day`, "so RAY checks space before every order"],
+    ["Delivery", zones.map((z) => inr(z.fee)).join(" or "), `${zones.reduce((n, z) => n + z.areas.length, 0)} areas near ${merchant.base_area ?? "home"}, pickup elsewhere`],
+    ["Rules", `${pol.lead_days ?? 0} days notice`, `${pol.advance_percent ?? 0}% advance above ${inr(pol.advance_threshold)}`],
+  ];
+  return (
+    <section className="sec">
+      <h2 className="sec-title">Meet Meera</h2>
+      <p className="sec-sub">The seller RAY Shop is built for. Meera, her bakery and her customers are made up for this demo; her numbers come from its data.</p>
+      <div className="pcard persona">
+        <div className="persona-main">
+          <div className="persona-id">
+            <MeeraLogo size={64} />
+            <div>
+              <div className="persona-name">{merchant.name ?? "Meera's Bakes"}</div>
+              <div className="persona-where">Home bakery in {merchant.base_area}, {merchant.city}</div>
+              <div className="persona-tags"><span className="tag">Selling since {since}</span><span className="tag">{String(merchant.instagram ?? "").replace(" (fictional)", "")}</span><span className="tag">No website</span></div>
+            </div>
+          </div>
+          <p className="persona-story">
+            Meera bakes cupcakes, cakes and cheesecake jars in her home kitchen and sells to neighbours and office teams across East Bengaluru.
+            Orders arrive as Instagram DMs and WhatsApp messages, usually in Hinglish. Customers pay by UPI and send a screenshot as proof.
+            She has one oven and no website, and she does the prices, the follow-ups and the baking herself.
+          </p>
+          <div className="persona-compare">
+            <div>
+              <h3>Before RAY Shop</h3>
+              <ul className="persona-list before">
+                <li>Works out every price by hand inside DMs</li>
+                <li>A screenshot is her only proof of payment</li>
+                <li>Chases advances one chat at a time</li>
+                <li>Nothing to share but her Instagram handle</li>
+              </ul>
+            </div>
+            <div>
+              <h3>With RAY Shop</h3>
+              <ul className="persona-list after">
+                <li>Forwards the DM, taps once, a Razorpay link goes out</li>
+                <li>Razorpay's own record confirms every payment</li>
+                <li>Reminders go only to customers who owe</li>
+                <li>A shop page built from one menu photo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <aside className="persona-side">
+          <figure className="persona-menu">
+            <img src={imageUrl("menu-1")} alt="Meera's handwritten menu card" />
+            <figcaption>Her handwritten menu card, the photo RAY reads on day 1</figcaption>
+          </figure>
+          <dl className="persona-facts">
+            {facts.map(([k, v, sub]) => <div key={k}><dt>{k}</dt><dd><b>{v}</b>{sub && <small>{sub}</small>}</dd></div>)}
+          </dl>
+        </aside>
+      </div>
+      <p className="persona-also">The same flow fits other home sellers who take orders in DMs, such as tiffin services, saree resellers and candle makers.</p>
+    </section>
+  );
+}
+
 const IconSparkle = () => (
   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" aria-hidden>
     <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /><path d="M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z" />
@@ -144,7 +221,7 @@ function HeroPhone({ m, final }: { m: Moment; final: State }) {
       <div className="device">
         <StatusBar />
         <div className="wa-head">
-          <span className="wa-avatar shop" aria-hidden>MB</span>
+          <span className="wa-avatar shop" aria-hidden><MeeraLogo size={36} /></span>
           <div className="wa-title"><div className="wa-name">Meera's Bakes <span className="verified"><IconCheck size={10} /></span></div><div className="wa-sub">Business account</div></div>
         </div>
         <div className="wa-chat">
@@ -191,7 +268,7 @@ function CustomerSide({ m, final }: { m: Moment; final: State }) {
     return (
       <MiniPhone title="" sub="Meera's Bakes · shop page" avatar={null} scrollKey={m.id} kind="web">
         <div className="pp mini-pp">
-          <div className="pp-banner"><span className="pp-logo">MB</span><div className="pp-name">Meera's Bakes</div><div className="pp-tag">Home baked in Indiranagar. Order 2 days ahead.</div></div>
+          <div className="pp-banner"><span className="pp-logo"><MeeraLogo size={36} /></span><div className="pp-name">Meera's Bakes</div><div className="pp-tag">Home baked in Indiranagar. Order 2 days ahead.</div></div>
           <div className="pp-body">
             <ul className="pp-items">
               {cat.map((c) => {
@@ -207,7 +284,7 @@ function CustomerSide({ m, final }: { m: Moment; final: State }) {
   }
   const paid = new Set(final.orders.filter((o) => o.payment_status !== "unpaid").map((o) => o.payment_link?.id));
   return (
-    <MiniPhone title="" sub="Meera's Bakes" avatar={<span className="wa-avatar shop">MB</span>} scrollKey={m.id}>
+    <MiniPhone title="" sub="Meera's Bakes" avatar={<MeeraLogo size={32} />} scrollKey={m.id}>
       {m.broadcast ? (
         <div className="bubble in">
           <div className="notify-head blue">Offer from Meera's Bakes</div>

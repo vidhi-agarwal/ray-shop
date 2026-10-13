@@ -6,7 +6,7 @@ import OrdersView from "./views/OrdersView";
 import GrowthView from "./views/GrowthView";
 import Overview from "./views/Overview";
 import HowItWorks from "./views/HowItWorks";
-import { IconBolt, IconChat, IconGrowth, IconOrders, IconRestart, RayMark } from "./Icons";
+import { IconBolt, IconChat, IconGrowth, IconOrders, IconRestart, MeeraLogo, RayMark } from "./Icons";
 
 type Mode = "live" | "replay" | "scripted";
 type Tab = "overview" | "demo" | "orders" | "growth" | "how";
@@ -152,6 +152,7 @@ export default function App() {
   // "play" opens the demo and runs it hands-free, from the start.
   const go = (t: string) => {
     if (t === "play") { setTab("demo"); if (sid) playAgain(); else setAuto(true); return; }
+    if (t === "manual") { setTab("demo"); if (sid) restart(); else setAuto(false); return; }
     setTab(t as Tab);
   };
 
@@ -167,7 +168,7 @@ export default function App() {
         <div className="rzp-right">
           <span className="rzp-test"><span className="mode-dot" />Test mode</span>
           <span className="rzp-search" aria-hidden><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>Search payment products, settings, and more</span>
-          <span className="rzp-avatar" title="Meera's Bakes">MB</span>
+          <span className="rzp-avatar" title="Meera's Bakes"><MeeraLogo size={30} /></span>
         </div>
       </header>
       <div className="frame">

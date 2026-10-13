@@ -8,9 +8,45 @@ Why Razorpay cares: free UPI apps give a tiny seller money in the bank and nothi
 
 Built for Razorpay's "Recover and Grow with AI" track. All data is synthetic: Meera's Bakes, its customers and orders are fictional.
 
+## Live demo
+
+**https://ray-shop.vercel.app** (no sign-up, works on a phone)
+
+| Link | What it opens |
+|---|---|
+| [ray-shop.vercel.app/#overview](https://ray-shop.vercel.app/#overview) | RAY Shop as a Razorpay product page: the pitch, Meera's story, her numbers, and six moments you can open in one click each |
+| [ray-shop.vercel.app/#demo](https://ray-shop.vercel.app/#demo) | The full run on Meera's and her customer's phones, with what RAY does behind each step |
+| [ray-shop.vercel.app/#orders](https://ray-shop.vercel.app/#orders) | Orders, oven slots, screenshot checks and the shop page preview |
+| [ray-shop.vercel.app/#growth](https://ray-shop.vercel.app/#growth) | Her sales on Razorpay and the next Razorpay product she is ready for |
+| [ray-shop.vercel.app/#how](https://ray-shop.vercel.app/#how) | How it works: where AI is used, the guardrails, prototype versus production |
+| [ray-shop.vercel.app/shop/meeras-bakes](https://ray-shop.vercel.app/shop/meeras-bakes) | Meera's shop page |
+
+Two ways to play the demo, both from the Overview:
+- **Try RAY Shop now** plays the whole run hands-free in about 2 minutes. It pauses on each moment, presses Meera's approval buttons where you can see them, and pays the mock Razorpay checkout. Pause or Play again from the step bar.
+- **Click through yourself** opens the same run and waits for you: tap the blue step, approve each card, and pay on the customer's phone. You can switch to Play all at any point.
+
+The hosted demo replays one recorded live run of Claude in the browser. Live mode needs the backend and an API key (see Run it).
+
+## Meet Meera
+
+**Meera's Bakes** is a made-up home bakery in Indiranagar, Bengaluru, selling since February 2025. Meera bakes cupcakes, cakes and cheesecake jars in her home kitchen and sells to neighbours and office teams across East Bengaluru. Orders arrive as Instagram DMs and WhatsApp messages, usually in Hinglish; customers pay by UPI and send a screenshot as proof. She has one oven and no website.
+
+| | From the demo data |
+|---|---|
+| Customers | 70, of whom 37 order again and again (46 order on WhatsApp, 24 on Instagram) |
+| Orders since 1 July | 224, every paid one through a Razorpay payment link (148 directly, 74 after a reminder) |
+| Menu | 6 items from Rs 220, eggless on request |
+| Oven | 12 boxes a day |
+| Delivery | Rs 60 to 5 nearby areas, Rs 120 to 6 further ones, pickup from Indiranagar elsewhere |
+| Her rules | 2 days notice, 50% advance above Rs 1,500 |
+
+Before RAY Shop she worked out prices by hand inside DMs, a screenshot was her only proof of payment, and she chased advances one chat at a time. With RAY Shop she forwards a DM, taps once, and a Razorpay link goes out; Razorpay's own record confirms every payment.
+
+One persona on purpose: RAY Shop is for one kind of seller, a home business with no website. The same flow fits tiffin services, saree resellers and candle makers who sell in DMs.
+
 ---
 
-## What the demo shows (90 seconds)
+## What the demo shows
 
 1. **Menu photo to shop.** Meera sends a photo of her menu card. RAY reads it, drafts six items with prices and eggless extras, and publishes a shop page once she approves.
 2. **Three months later.** Her shop has history: 224 orders since 1 July, Rs 41,990 in July, October on track for about Rs 1.21 lakh.
@@ -60,8 +96,8 @@ uvicorn rayshop.server:app --port 8000           # open http://localhost:8000
 
 For frontend work: `cd frontend && npm run dev` (port 5173, proxies the API).
 
-**Modes** (top right, or `?mode=` in the URL):
-- **Replay of a live run** (default): plays `demo/meera-live-demo.jsonl`, a real recorded run, pausing for your clicks. Use this for the hosted link.
+**Modes** (on the Try it live tab before you start, or `?mode=` in the URL):
+- **Replay of a live run** (default): plays `demo/meera-live-demo.jsonl`, a real recorded run, pausing for your clicks, or hands-free with Play all. Use this for the hosted link.
 - **Live agent**: Claude runs now. About $0.85 for the whole demo with Sonnet.
 - **Scripted, no AI**: same tools in a fixed order, for UI work. The badge says so.
 
@@ -113,5 +149,10 @@ backend/rayshop/server.py    API, live/scripted/replay sessions, mock pay page, 
 backend/seed/generate.py   synthetic data and images
 backend/eval/run_eval.py   eval
 backend/rayshop/export_static.py  files for the static Vercel build
-frontend/src/              Meera's phone, customer's phone, live trace, orders, growth
+frontend/src/App.tsx               Razorpay Dashboard frame, tabs, sessions, autoplay switch
+frontend/src/views/Overview.tsx    product page: pitch, Meet Meera, numbers, six moments, growth path
+frontend/src/views/ChatView.tsx    Meera's phone, customer's phone, checkout, live trace, autoplay
+frontend/src/views/HowItWorks.tsx  how it works
+frontend/src/replay.ts             browser replay for the static build
+frontend/src/state.ts              events to UI state; the recorded run as finished moments
 ```

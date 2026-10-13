@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { State, imageUrl, inr, niceDate, packLabel } from "../state";
-import { IconExternal, IconLock, IconShield } from "../Icons";
+import { IconExternal, IconLock, IconShield, MeeraLogo } from "../Icons";
 
 const STATUS: Record<string, [string, string]> = {
   unpaid: ["Not paid", "st-unpaid"], paid: ["Paid", "st-paid"], advance_paid: ["Advance paid", "st-advance"],
@@ -123,7 +123,7 @@ export default function OrdersView({ state }: { state: State }) {
           <div className="paypage-cap">Shop page preview<span className={`status ${state.shopPublished ? "st-paid" : cat.length ? "st-advance" : "st-muted"}`}>{state.shopPublished ? "Live" : cat.length ? "Draft" : "Not built"}</span></div>
           <div className="pp">
             <div className="pp-banner">
-              <span className="pp-logo">MB</span>
+              <span className="pp-logo"><MeeraLogo size={44} /></span>
               <div className="pp-name">Meera's Bakes</div>
               <div className="pp-tag">Home baked in Indiranagar, Bengaluru. Order 2 days ahead.</div>
             </div>

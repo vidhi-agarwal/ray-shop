@@ -316,7 +316,7 @@ def shop_page(shop_id: str) -> str:
     return PAGE_HEAD.format(title=html.escape(m["name"])) + f"""
 <style>.w{{max-width:1040px;margin:0 auto;padding:32px 20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:28px;align-items:start}}
 .l{{background:radial-gradient(130% 120% at 0% 0%,#FFE1EA,transparent 60%),linear-gradient(135deg,#FFF4EC,#FFE9F0);border-radius:18px;padding:28px;border:1px solid #F5E1E6}}
-.lg{{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#FF8FB1,#E0477A);color:#fff;font-weight:800;display:grid;place-items:center;box-shadow:0 8px 18px #e0477a44}}
+.lg{{width:56px;height:56px;border-radius:14px;overflow:hidden;box-shadow:0 8px 18px #e0477a44}}.lg svg{{display:block}}
 h1{{font-family:Lora,Georgia,serif;font-style:italic;font-weight:600;color:#8F2E52;font-size:34px;margin:16px 0 6px}}.l p{{color:#6F5560;margin:0 0 6px}}
 .tags{{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}}.tags span{{background:#fff;border-radius:999px;padding:4px 11px;font-size:12.5px;color:#8F2E52;font-weight:500}}
 .card{{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px #0d1b3e0f,0 10px 30px #0d1b3e10;overflow:hidden}}
@@ -328,7 +328,7 @@ li b{{display:block;font-weight:600}}li small{{color:var(--ink3);font-size:12px}
 .tot{{display:flex;justify-content:space-between;font-weight:700;font-size:16px}}.go{{border:0;border-radius:10px;background:var(--blue);color:#fff;font-weight:700;padding:13px;font-size:15px}}
 .go:disabled{{background:#AFC0F5;cursor:not-allowed}}.go:not(:disabled):hover{{background:var(--blue2)}}.sec{{text-align:center;font-size:12px;color:var(--ink3)}}.sec b{{color:var(--ink);font-style:italic}}
 .note{{font-size:12px;color:var(--ink3);text-align:center;margin-top:14px}}@media(max-width:820px){{.w{{grid-template-columns:minmax(0,1fr);padding:16px}}h1{{font-size:28px}}}}</style></head>
-<body><div class=w><section class=l><div class=lg>MB</div><h1>{html.escape(m['name'])}</h1>
+<body><div class=w><section class=l><div class=lg><svg viewBox="0 0 32 32" width="56" height="56"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF9DBB"/><stop offset="1" stop-color="#D93D73"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#g)"/><path d="M10.2 17.2h11.6l-1.5 7.9a1.6 1.6 0 0 1-1.6 1.3h-5.4a1.6 1.6 0 0 1-1.6-1.3z" fill="#fff"/><path d="M9 16.8c0-2.3 1.7-3.8 3.6-3.8.4-2.2 2-3.6 3.4-3.6s3 1.4 3.4 3.6c1.9 0 3.6 1.5 3.6 3.8z" fill="#FFE4EE"/><circle cx="16" cy="7.6" r="1.9" fill="#fff"/></svg></div><h1>{html.escape(m['name'])}</h1>
 <p>Home baked in {html.escape(m['base_area'])}, {html.escape(m['city'])}.</p><p>Order 2 days ahead. Delivery across East Bengaluru, or pick up in {html.escape(m['base_area'])}.</p>
 <div class=tags><span>Eggless options</span><span>Diwali hampers</span><span>Pay by UPI or card</span></div></section>
 <section class=card><div class=ch>Your order</div><ul id=items>{''.join(rows)}</ul>

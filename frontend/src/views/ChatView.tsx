@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { APPROVAL_LABEL, ChatMsg, LADDER, SellerItem, State, TOOL_LABEL, TraceItem, imageSrc, imageUrl, inr, niceDate, packLabel, thread } from "../state";
 import {
   IconBack, IconBank, IconBolt, IconCamera, IconCard, IconChat, IconCheck, IconClock, IconForward, IconLock, IconPlay,
-  IconSend, IconShield, IconWallet, IconWarn, RayMark,
+  IconSend, IconShield, IconWallet, IconWarn, MeeraLogo, RayMark,
 } from "../Icons";
 
 type Props = {
@@ -125,7 +125,7 @@ function StepBar({ script, done, next, canStep, runStep, status, auto, setAuto, 
           );
         })}
       </ol>
-      <div className={`stepbar-status st-${status}`} role="status">
+      <div className={`stepbar-status st-${status} ${status === "ready" && !auto ? "idle" : ""}`} role="status">
         {(status === "busy" || (auto && status !== "done")) && <span className="spinner" aria-hidden />}
         {status === "done" && <IconCheck size={15} />}
         {(auto ? AUTO_STATUS : STATUS)[status]}
@@ -321,7 +321,7 @@ function CustomerPhone({ state, pay, gateway, mode, waitingForPay, auto }:
         <StatusBar />
         <div className="wa-head">
           <span className="wa-back" aria-hidden><IconBack size={20} /></span>
-          <span className="wa-avatar shop" aria-hidden>MB</span>
+          <span className="wa-avatar shop" aria-hidden><MeeraLogo size={36} /></span>
           <div className="wa-title">
             <div className="wa-name">Meera's Bakes <span className="verified" aria-label="business"><IconCheck size={10} /></span></div>
             <div className="wa-sub">Business account</div>
@@ -401,7 +401,7 @@ function Checkout({ amount, customer, onPaid, onClose, auto }: { id: string; amo
       <div className="co-ribbon">Test mode · mock checkout · no real money</div>
       <div className="co-head">
         <div className="co-merchant">
-          <span className="co-logo">MB</span>
+          <span className="co-logo"><MeeraLogo size={38} /></span>
           <div><b>Meera's Bakes</b><small>{customer ? `Paying as ${customer}` : "Payment"}</small></div>
           {stage === "options" && <button className="co-x" onClick={onClose} aria-label="Close checkout">×</button>}
         </div>

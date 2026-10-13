@@ -41,3 +41,20 @@ export function RayMark({ size = 30 }: { size?: number }) {
     </svg>
   );
 }
+
+// Meera's Bakes: a cupcake on a pink tile. Made up for the demo, like the bakery itself.
+export function MeeraLogo({ size = 32 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} aria-hidden className="meera-logo">
+      <defs>
+        <linearGradient id="mb-tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FF9DBB" /><stop offset="1" stopColor="#D93D73" /></linearGradient>
+      </defs>
+      <rect width="32" height="32" rx="9" fill="url(#mb-tile)" />
+      <path d="M10.2 17.2h11.6l-1.5 7.9a1.6 1.6 0 0 1-1.6 1.3h-5.4a1.6 1.6 0 0 1-1.6-1.3z" fill="#fff" />
+      <path d="M13.4 18.6l.5 6.4M16 18.6v6.4M18.6 18.6l-.5 6.4" stroke="#F4A9C1" strokeWidth="1.1" strokeLinecap="round" />
+      <path d="M9 16.8c0-2.3 1.7-3.8 3.6-3.8.4-2.2 2-3.6 3.4-3.6s3 1.4 3.4 3.6c1.9 0 3.6 1.5 3.6 3.8z" fill="#FFE4EE" />
+      <path d="M11.6 14.6c1.4.5 2.6.4 4-.4M16.6 14.4c1.2.6 2.6.6 3.8 0" stroke="#F4A9C1" strokeWidth="1" fill="none" strokeLinecap="round" />
+      <circle cx="16" cy="7.6" r="1.9" fill="#fff" />
+    </svg>
+  );
+}
