@@ -1,0 +1,20 @@
+[
+ {
+  "id": "menu-1",
+  "file": "images/menu-1.jpg",
+  "mime": "image/jpeg",
+  "title": "Meera's handwritten menu card (phone photo)"
+ },
+ {
+  "id": "ss-arjun-1",
+  "file": "images/ss-arjun-1.png",
+  "mime": "image/png",
+  "title": "Arjun's payment screenshot"
+ },
+ {
+  "id": "ss-real-1",
+  "file": "images/ss-real-1.png",
+  "mime": "image/png",
+  "title": "Divya Bhat's payment screenshot"
+ }
+]

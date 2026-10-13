@@ -1,0 +1,562 @@
+[
+ {
+  "id": "C001",
+  "name": "Riya Menon",
+  "area": "Ulsoor",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 951***311"
+ },
+ {
+  "id": "C002",
+  "name": "Arjun Shetty",
+  "area": "HSR Layout",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 941***325"
+ },
+ {
+  "id": "C003",
+  "name": "Sneha Iyer",
+  "area": "Old Airport Road",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 971***999"
+ },
+ {
+  "id": "C004",
+  "name": "Kavya Rao",
+  "area": "Koramangala",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 983***693"
+ },
+ {
+  "id": "C005",
+  "name": "Aditi Bhat",
+  "area": "HAL 2nd Stage",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 931***226"
+ },
+ {
+  "id": "C006",
+  "name": "Rohan Menon",
+  "area": "Koramangala",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 995***591"
+ },
+ {
+  "id": "C007",
+  "name": "Ishaan Bhat",
+  "area": "Jeevan Bima Nagar",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 993***929"
+ },
+ {
+  "id": "C008",
+  "name": "Neha Iyer",
+  "area": "HSR Layout",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 991***481"
+ },
+ {
+  "id": "C009",
+  "name": "Tanya Reddy",
+  "area": "CV Raman Nagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 966***159"
+ },
+ {
+  "id": "C010",
+  "name": "Vikram Iyer",
+  "area": "Old Airport Road",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 972***832"
+ },
+ {
+  "id": "C011",
+  "name": "Pooja Bhat",
+  "area": "Ejipura",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 914***155"
+ },
+ {
+  "id": "C012",
+  "name": "Karan Bhat",
+  "area": "Ulsoor",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 911***684"
+ },
+ {
+  "id": "C013",
+  "name": "Ananya Bhat",
+  "area": "Old Airport Road",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 927***737"
+ },
+ {
+  "id": "C014",
+  "name": "Meghna Menon",
+  "area": "Koramangala",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 985***371"
+ },
+ {
+  "id": "C015",
+  "name": "Siddharth Sharma",
+  "area": "Ejipura",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 994***628"
+ },
+ {
+  "id": "C016",
+  "name": "Divya Bhat",
+  "area": "Old Airport Road",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 998***605"
+ },
+ {
+  "id": "C017",
+  "name": "Nikhil Reddy",
+  "area": "Koramangala",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 968***387"
+ },
+ {
+  "id": "C018",
+  "name": "Shreya Rao",
+  "area": "Indiranagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 996***429"
+ },
+ {
+  "id": "C019",
+  "name": "Aarav Menon",
+  "area": "Defence Colony",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 927***179"
+ },
+ {
+  "id": "C020",
+  "name": "Priya Kulkarni",
+  "area": "Ulsoor",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 982***310"
+ },
+ {
+  "id": "C021",
+  "name": "Rahul Iyer",
+  "area": "Jeevan Bima Nagar",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 926***389"
+ },
+ {
+  "id": "C022",
+  "name": "Simran Rao",
+  "area": "Ejipura",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 911***262"
+ },
+ {
+  "id": "C023",
+  "name": "Varun Menon",
+  "area": "Ulsoor",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 940***374"
+ },
+ {
+  "id": "C024",
+  "name": "Nandini Gowda",
+  "area": "Old Airport Road",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 946***501"
+ },
+ {
+  "id": "C025",
+  "name": "Aman Iyer",
+  "area": "Indiranagar",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 912***180"
+ },
+ {
+  "id": "C026",
+  "name": "Ritika Kapoor",
+  "area": "HSR Layout",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 945***139"
+ },
+ {
+  "id": "C027",
+  "name": "Dev Rao",
+  "area": "CV Raman Nagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 927***916"
+ },
+ {
+  "id": "C028",
+  "name": "Ira Pillai",
+  "area": "HAL 2nd Stage",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 941***488"
+ },
+ {
+  "id": "C029",
+  "name": "Kabir Kapoor",
+  "area": "Indiranagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 958***572"
+ },
+ {
+  "id": "C030",
+  "name": "Mira Sharma",
+  "area": "Old Airport Road",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 930***120"
+ },
+ {
+  "id": "C031",
+  "name": "Zoya Kulkarni",
+  "area": "Domlur",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 916***515"
+ },
+ {
+  "id": "C032",
+  "name": "Yash Reddy",
+  "area": "Indiranagar",
+  "channel": "instagram",
+  "marketing_opt_in": false,
+  "phone": "+91 991***996"
+ },
+ {
+  "id": "C033",
+  "name": "Riya Iyer",
+  "area": "Domlur",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 980***102"
+ },
+ {
+  "id": "C034",
+  "name": "Arjun Gowda",
+  "area": "Indiranagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 955***779"
+ },
+ {
+  "id": "C035",
+  "name": "Sneha Sharma",
+  "area": "Ejipura",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 986***230"
+ },
+ {
+  "id": "C036",
+  "name": "Kavya Nair",
+  "area": "CV Raman Nagar",
+  "channel": "instagram",
+  "marketing_opt_in": false,
+  "phone": "+91 958***278"
+ },
+ {
+  "id": "C037",
+  "name": "Aditi Gowda",
+  "area": "Koramangala",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 951***678"
+ },
+ {
+  "id": "C038",
+  "name": "Rohan Rao",
+  "area": "Koramangala",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 911***810"
+ },
+ {
+  "id": "C039",
+  "name": "Ishaan Kulkarni",
+  "area": "HSR Layout",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 970***200"
+ },
+ {
+  "id": "C040",
+  "name": "Neha Reddy",
+  "area": "Ulsoor",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 960***744"
+ },
+ {
+  "id": "C041",
+  "name": "Tanya Rao",
+  "area": "Defence Colony",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 931***617"
+ },
+ {
+  "id": "C042",
+  "name": "Vikram Bhat",
+  "area": "Domlur",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 951***969"
+ },
+ {
+  "id": "C043",
+  "name": "Pooja Gowda",
+  "area": "Jeevan Bima Nagar",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 969***585"
+ },
+ {
+  "id": "C044",
+  "name": "Karan Menon",
+  "area": "Jeevan Bima Nagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 930***969"
+ },
+ {
+  "id": "C045",
+  "name": "Ananya Pillai",
+  "area": "CV Raman Nagar",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 980***866"
+ },
+ {
+  "id": "C046",
+  "name": "Meghna Sharma",
+  "area": "Old Airport Road",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 977***723"
+ },
+ {
+  "id": "C047",
+  "name": "Siddharth Menon",
+  "area": "Indiranagar",
+  "channel": "instagram",
+  "marketing_opt_in": false,
+  "phone": "+91 938***856"
+ },
+ {
+  "id": "C048",
+  "name": "Divya Sharma",
+  "area": "Defence Colony",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 968***823"
+ },
+ {
+  "id": "C049",
+  "name": "Nikhil Shetty",
+  "area": "HAL 2nd Stage",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 953***474"
+ },
+ {
+  "id": "C050",
+  "name": "Shreya Bhat",
+  "area": "CV Raman Nagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 922***640"
+ },
+ {
+  "id": "C051",
+  "name": "Aarav Rao",
+  "area": "Domlur",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 945***447"
+ },
+ {
+  "id": "C052",
+  "name": "Priya Iyer",
+  "area": "Jeevan Bima Nagar",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 996***265"
+ },
+ {
+  "id": "C053",
+  "name": "Rahul Iyer",
+  "area": "Ejipura",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 932***322"
+ },
+ {
+  "id": "C054",
+  "name": "Simran Kapoor",
+  "area": "Jeevan Bima Nagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 986***909"
+ },
+ {
+  "id": "C055",
+  "name": "Varun Menon",
+  "area": "Defence Colony",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 926***463"
+ },
+ {
+  "id": "C056",
+  "name": "Nandini Bhat",
+  "area": "Indiranagar",
+  "channel": "instagram",
+  "marketing_opt_in": false,
+  "phone": "+91 993***776"
+ },
+ {
+  "id": "C057",
+  "name": "Aman Nair",
+  "area": "HSR Layout",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 934***623"
+ },
+ {
+  "id": "C058",
+  "name": "Ritika Shetty",
+  "area": "Domlur",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 932***186"
+ },
+ {
+  "id": "C059",
+  "name": "Dev Rao",
+  "area": "HSR Layout",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 932***397"
+ },
+ {
+  "id": "C060",
+  "name": "Ira Bhat",
+  "area": "Old Airport Road",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 991***131"
+ },
+ {
+  "id": "C061",
+  "name": "Kabir Menon",
+  "area": "Ejipura",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 996***911"
+ },
+ {
+  "id": "C062",
+  "name": "Mira Nair",
+  "area": "Domlur",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 946***133"
+ },
+ {
+  "id": "C063",
+  "name": "Zoya Shetty",
+  "area": "Domlur",
+  "channel": "whatsapp",
+  "marketing_opt_in": false,
+  "phone": "+91 976***432"
+ },
+ {
+  "id": "C064",
+  "name": "Yash Shetty",
+  "area": "Defence Colony",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 966***171"
+ },
+ {
+  "id": "C065",
+  "name": "Riya Reddy",
+  "area": "Ulsoor",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 921***927"
+ },
+ {
+  "id": "C066",
+  "name": "Arjun Kulkarni",
+  "area": "HAL 2nd Stage",
+  "channel": "instagram",
+  "marketing_opt_in": true,
+  "phone": "+91 920***832"
+ },
+ {
+  "id": "C067",
+  "name": "Sneha Shetty",
+  "area": "Ulsoor",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 968***363"
+ },
+ {
+  "id": "C068",
+  "name": "Kavya Reddy",
+  "area": "Ulsoor",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 913***984"
+ },
+ {
+  "id": "C069",
+  "name": "Aditi Reddy",
+  "area": "Old Airport Road",
+  "channel": "instagram",
+  "marketing_opt_in": false,
+  "phone": "+91 938***105"
+ },
+ {
+  "id": "C070",
+  "name": "Rohan Shetty",
+  "area": "Jeevan Bima Nagar",
+  "channel": "whatsapp",
+  "marketing_opt_in": true,
+  "phone": "+91 979***270"
+ }
+]

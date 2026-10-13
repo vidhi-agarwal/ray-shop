@@ -1,0 +1,44 @@
+{
+ "id": "meeras-bakes",
+ "name": "Meera's Bakes",
+ "owner": "Meera",
+ "city": "Bengaluru",
+ "base_area": "Indiranagar",
+ "instagram": "@meerasbakes.blr (fictional)",
+ "selling_since": "2025-02",
+ "fictional": true,
+ "policies": {
+  "advance_threshold": 1500,
+  "advance_percent": 50,
+  "lead_days": 2,
+  "daily_capacity_units": 12
+ },
+ "delivery_zones": [
+  {
+   "name": "Near",
+   "fee": 60,
+   "areas": [
+    "Indiranagar",
+    "Domlur",
+    "HAL 2nd Stage",
+    "Old Airport Road",
+    "Defence Colony"
+   ]
+  },
+  {
+   "name": "Far",
+   "fee": 120,
+   "areas": [
+    "Koramangala",
+    "HSR Layout",
+    "Ulsoor",
+    "CV Raman Nagar",
+    "Jeevan Bima Nagar",
+    "Ejipura"
+   ]
+  }
+ ],
+ "delivery_note": "Other areas: pickup from Indiranagar only.",
+ "today": "2026-10-13",
+ "on_rayshop_since": "2026-07-01"
+}

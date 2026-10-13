@@ -1,0 +1,66 @@
+{
+ "catalogue": [
+  {
+   "sku": "RV6",
+   "name": "Red velvet cupcakes",
+   "pack": "box of 6",
+   "price": 540,
+   "eggless_extra": 40,
+   "units": 1
+  },
+  {
+   "sku": "CT6",
+   "name": "Chocolate truffle cupcakes",
+   "pack": "box of 6",
+   "price": 480,
+   "eggless_extra": 40,
+   "units": 1
+  },
+  {
+   "sku": "EV6",
+   "name": "Eggless vanilla bean cupcakes",
+   "pack": "box of 6",
+   "price": 450,
+   "eggless_extra": 0,
+   "units": 1
+  },
+  {
+   "sku": "BCJ",
+   "name": "Biscoff cheesecake jar",
+   "pack": "1 jar",
+   "price": 220,
+   "eggless_extra": null,
+   "units": 0.5
+  },
+  {
+   "sku": "CC1",
+   "name": "Classic chocolate cake",
+   "pack": "1 kg",
+   "price": 1100,
+   "eggless_extra": 100,
+   "units": 2
+  },
+  {
+   "sku": "DH",
+   "name": "Diwali gift hamper",
+   "pack": "6 cupcakes, 2 jars, diyas",
+   "price": 1499,
+   "eggless_extra": null,
+   "units": 2
+  }
+ ],
+ "screenshots": {
+  "ss-arjun-1": {
+   "order_id": "M-0223",
+   "amount": 1320,
+   "utr": "428719630571",
+   "verdict": "not_received"
+  },
+  "ss-real-1": {
+   "order_id": "M-0222",
+   "amount": 1350,
+   "utr": "731204558812",
+   "verdict": "matches"
+  }
+ }
+}

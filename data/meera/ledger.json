@@ -1,0 +1,6089 @@
+[
+ {
+  "id": "M-0001",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-01T22:49",
+  "deliver_on": "2026-07-03",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1200,
+  "delivery_fee": 120,
+  "total": 1320,
+  "due_now": 1320,
+  "units": 2.0,
+  "amount_paid": 1320,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0002",
+  "customer_id": "C019",
+  "customer": "Aarav Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-02T15:19",
+  "deliver_on": "2026-07-06",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0003",
+  "customer_id": "C007",
+  "customer": "Ishaan Bhat",
+  "channel": "instagram",
+  "placed_at": "2026-07-03T21:39",
+  "deliver_on": "2026-07-05",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1040,
+  "delivery_fee": 120,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0004",
+  "customer_id": "C020",
+  "customer": "Priya Kulkarni",
+  "channel": "instagram",
+  "placed_at": "2026-07-03T13:07",
+  "deliver_on": "2026-07-05",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0005",
+  "customer_id": "C014",
+  "customer": "Meghna Menon",
+  "channel": "instagram",
+  "placed_at": "2026-07-04T13:27",
+  "deliver_on": "2026-07-08",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0006",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-07-04T17:03",
+  "deliver_on": "2026-07-06",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 970,
+  "delivery_fee": 60,
+  "total": 1030,
+  "due_now": 1030,
+  "units": 2.0,
+  "amount_paid": 1030,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0007",
+  "customer_id": "C025",
+  "customer": "Aman Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-07-05T21:32",
+  "deliver_on": "2026-07-09",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0008",
+  "customer_id": "C048",
+  "customer": "Divya Sharma",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-05T10:45",
+  "deliver_on": "2026-07-07",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0009",
+  "customer_id": "C017",
+  "customer": "Nikhil Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-07-06T17:36",
+  "deliver_on": "2026-07-08",
+  "area": "Koramangala",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 700,
+  "delivery_fee": 0,
+  "total": 700,
+  "due_now": 700,
+  "units": 1.5,
+  "amount_paid": 700,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0010",
+  "customer_id": "C006",
+  "customer": "Rohan Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-08T13:07",
+  "deliver_on": "2026-07-10",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 120,
+  "total": 570,
+  "due_now": 570,
+  "units": 1.0,
+  "amount_paid": 570,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0011",
+  "customer_id": "C013",
+  "customer": "Ananya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-08T09:20",
+  "deliver_on": "2026-07-10",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 60,
+  "total": 1020,
+  "due_now": 1020,
+  "units": 2.0,
+  "amount_paid": 1020,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0012",
+  "customer_id": "C032",
+  "customer": "Yash Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-07-09T18:46",
+  "deliver_on": "2026-07-11",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2180,
+  "delivery_fee": 60,
+  "total": 2240,
+  "due_now": 1120,
+  "units": 4.0,
+  "amount_paid": 2240,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0013",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-10T15:09",
+  "deliver_on": "2026-07-12",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 120,
+  "total": 1220,
+  "due_now": 1220,
+  "units": 2.0,
+  "amount_paid": 1220,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0014",
+  "customer_id": "C027",
+  "customer": "Dev Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-11T17:25",
+  "deliver_on": "2026-07-13",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0015",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-12T11:03",
+  "deliver_on": "2026-07-16",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0016",
+  "customer_id": "C011",
+  "customer": "Pooja Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-12T17:06",
+  "deliver_on": "2026-07-16",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1550,
+  "delivery_fee": 120,
+  "total": 1670,
+  "due_now": 835,
+  "units": 3.0,
+  "amount_paid": 1670,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0017",
+  "customer_id": "C023",
+  "customer": "Varun Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-13T15:30",
+  "deliver_on": "2026-07-15",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0018",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-13T16:19",
+  "deliver_on": "2026-07-15",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0019",
+  "customer_id": "C011",
+  "customer": "Pooja Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-14T12:40",
+  "deliver_on": "2026-07-17",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 120,
+  "total": 700,
+  "due_now": 700,
+  "units": 1.0,
+  "amount_paid": 700,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0020",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-16T21:57",
+  "deliver_on": "2026-07-18",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1320,
+  "delivery_fee": 120,
+  "total": 1440,
+  "due_now": 1440,
+  "units": 2.5,
+  "amount_paid": 1440,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0021",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-17T14:38",
+  "deliver_on": "2026-07-20",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1160,
+  "delivery_fee": 120,
+  "total": 1280,
+  "due_now": 1280,
+  "units": 2.0,
+  "amount_paid": 1280,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0022",
+  "customer_id": "C052",
+  "customer": "Priya Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-07-17T17:58",
+  "deliver_on": "2026-07-20",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 120,
+  "total": 1220,
+  "due_now": 1220,
+  "units": 2.0,
+  "amount_paid": 1220,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0023",
+  "customer_id": "C022",
+  "customer": "Simran Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-17T16:53",
+  "deliver_on": "2026-07-20",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0024",
+  "customer_id": "C029",
+  "customer": "Kabir Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-17T19:33",
+  "deliver_on": "2026-07-19",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 60,
+  "total": 2260,
+  "due_now": 1130,
+  "units": 4.0,
+  "amount_paid": 2260,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0025",
+  "customer_id": "C012",
+  "customer": "Karan Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-18T13:08",
+  "deliver_on": "2026-07-20",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 0,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0026",
+  "customer_id": "C013",
+  "customer": "Ananya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-18T17:39",
+  "deliver_on": "2026-07-20",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0027",
+  "customer_id": "C021",
+  "customer": "Rahul Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-07-19T21:02",
+  "deliver_on": "2026-07-22",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 0,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0028",
+  "customer_id": "C060",
+  "customer": "Ira Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-19T19:34",
+  "deliver_on": "2026-07-23",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 980,
+  "delivery_fee": 60,
+  "total": 1040,
+  "due_now": 1040,
+  "units": 2.0,
+  "amount_paid": 1040,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0029",
+  "customer_id": "C051",
+  "customer": "Aarav Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-21T19:45",
+  "deliver_on": "2026-07-23",
+  "area": "Domlur",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0030",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-22T15:53",
+  "deliver_on": "2026-07-24",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1440,
+  "delivery_fee": 120,
+  "total": 1560,
+  "due_now": 780,
+  "units": 3.0,
+  "amount_paid": 1560,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0031",
+  "customer_id": "C067",
+  "customer": "Sneha Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-24T18:34",
+  "deliver_on": "2026-07-26",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 120,
+  "total": 700,
+  "due_now": 700,
+  "units": 1.0,
+  "amount_paid": 700,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0032",
+  "customer_id": "C012",
+  "customer": "Karan Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-25T22:24",
+  "deliver_on": "2026-07-27",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 120,
+  "total": 340,
+  "due_now": 340,
+  "units": 0.5,
+  "amount_paid": 340,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0033",
+  "customer_id": "C022",
+  "customer": "Simran Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-26T13:17",
+  "deliver_on": "2026-07-30",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0034",
+  "customer_id": "C021",
+  "customer": "Rahul Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-07-26T09:07",
+  "deliver_on": "2026-07-28",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2420,
+  "delivery_fee": 120,
+  "total": 2540,
+  "due_now": 1270,
+  "units": 4.5,
+  "amount_paid": 2540,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0035",
+  "customer_id": "C058",
+  "customer": "Ritika Shetty",
+  "channel": "instagram",
+  "placed_at": "2026-07-26T12:45",
+  "deliver_on": "2026-07-30",
+  "area": "Domlur",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0036",
+  "customer_id": "C050",
+  "customer": "Shreya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-26T17:47",
+  "deliver_on": "2026-07-28",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0037",
+  "customer_id": "C012",
+  "customer": "Karan Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-28T16:22",
+  "deliver_on": "2026-07-30",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1200,
+  "delivery_fee": 120,
+  "total": 1320,
+  "due_now": 1320,
+  "units": 2.0,
+  "amount_paid": 1320,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0038",
+  "customer_id": "C033",
+  "customer": "Riya Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-07-29T14:18",
+  "deliver_on": "2026-07-31",
+  "area": "Domlur",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 60,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0039",
+  "customer_id": "C017",
+  "customer": "Nikhil Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-07-31T18:01",
+  "deliver_on": "2026-08-04",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 120,
+  "total": 1220,
+  "due_now": 1220,
+  "units": 2.0,
+  "amount_paid": 1220,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0040",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-31T18:09",
+  "deliver_on": "2026-08-02",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 3,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1620,
+  "delivery_fee": 120,
+  "total": 1740,
+  "due_now": 870,
+  "units": 3.0,
+  "amount_paid": 1740,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0041",
+  "customer_id": "C006",
+  "customer": "Rohan Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-07-31T14:30",
+  "deliver_on": "2026-08-03",
+  "area": "Koramangala",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 0,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0042",
+  "customer_id": "C006",
+  "customer": "Rohan Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-01T16:54",
+  "deliver_on": "2026-08-04",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0043",
+  "customer_id": "C026",
+  "customer": "Ritika Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-01T12:02",
+  "deliver_on": "2026-08-03",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0044",
+  "customer_id": "C016",
+  "customer": "Divya Bhat",
+  "channel": "instagram",
+  "placed_at": "2026-08-02T12:48",
+  "deliver_on": "2026-08-06",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0045",
+  "customer_id": "C030",
+  "customer": "Mira Sharma",
+  "channel": "instagram",
+  "placed_at": "2026-08-02T15:26",
+  "deliver_on": "2026-08-05",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1560,
+  "delivery_fee": 60,
+  "total": 1620,
+  "due_now": 810,
+  "units": 3.0,
+  "amount_paid": 1620,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0046",
+  "customer_id": "C041",
+  "customer": "Tanya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-02T13:19",
+  "deliver_on": "2026-08-04",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0047",
+  "customer_id": "C057",
+  "customer": "Aman Nair",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-02T17:19",
+  "deliver_on": "2026-08-06",
+  "area": "HSR Layout",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 0,
+  "total": 580,
+  "due_now": 580,
+  "units": 1.0,
+  "amount_paid": 580,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0048",
+  "customer_id": "C004",
+  "customer": "Kavya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-03T20:08",
+  "deliver_on": "2026-08-06",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 120,
+  "total": 1200,
+  "due_now": 1200,
+  "units": 2.0,
+  "amount_paid": 1200,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0049",
+  "customer_id": "C015",
+  "customer": "Siddharth Sharma",
+  "channel": "instagram",
+  "placed_at": "2026-08-04T13:52",
+  "deliver_on": "2026-08-07",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 3,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1620,
+  "delivery_fee": 120,
+  "total": 1740,
+  "due_now": 870,
+  "units": 3.0,
+  "amount_paid": 1740,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0050",
+  "customer_id": "C051",
+  "customer": "Aarav Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-05T13:37",
+  "deliver_on": "2026-08-09",
+  "area": "Domlur",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 440,
+  "delivery_fee": 60,
+  "total": 500,
+  "due_now": 500,
+  "units": 1.0,
+  "amount_paid": 500,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0051",
+  "customer_id": "C055",
+  "customer": "Varun Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-06T16:42",
+  "deliver_on": "2026-08-10",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0052",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-08-06T11:19",
+  "deliver_on": "2026-08-08",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0053",
+  "customer_id": "C030",
+  "customer": "Mira Sharma",
+  "channel": "instagram",
+  "placed_at": "2026-08-07T14:47",
+  "deliver_on": "2026-08-11",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0054",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-07T18:37",
+  "deliver_on": "2026-08-09",
+  "area": "HSR Layout",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1200,
+  "delivery_fee": 0,
+  "total": 1200,
+  "due_now": 1200,
+  "units": 2.0,
+  "amount_paid": 1200,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0055",
+  "customer_id": "C032",
+  "customer": "Yash Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-08-08T10:31",
+  "deliver_on": "2026-08-10",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 60,
+  "total": 640,
+  "due_now": 640,
+  "units": 1.0,
+  "amount_paid": 640,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0056",
+  "customer_id": "C009",
+  "customer": "Tanya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-08T19:02",
+  "deliver_on": "2026-08-10",
+  "area": "CV Raman Nagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 0,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0057",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-09T14:44",
+  "deliver_on": "2026-08-13",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 0,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0058",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-09T22:34",
+  "deliver_on": "2026-08-11",
+  "area": "HSR Layout",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 0,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0059",
+  "customer_id": "C010",
+  "customer": "Vikram Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-09T10:53",
+  "deliver_on": "2026-08-13",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0060",
+  "customer_id": "C020",
+  "customer": "Priya Kulkarni",
+  "channel": "instagram",
+  "placed_at": "2026-08-09T22:36",
+  "deliver_on": "2026-08-12",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 520,
+  "delivery_fee": 0,
+  "total": 520,
+  "due_now": 520,
+  "units": 1.0,
+  "amount_paid": 520,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0061",
+  "customer_id": "C010",
+  "customer": "Vikram Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-12T17:24",
+  "deliver_on": "2026-08-16",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 60,
+  "total": 280,
+  "due_now": 280,
+  "units": 0.5,
+  "amount_paid": 280,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0062",
+  "customer_id": "C015",
+  "customer": "Siddharth Sharma",
+  "channel": "instagram",
+  "placed_at": "2026-08-12T15:46",
+  "deliver_on": "2026-08-15",
+  "area": "Ejipura",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 0,
+  "total": 480,
+  "due_now": 480,
+  "units": 1.0,
+  "amount_paid": 480,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0063",
+  "customer_id": "C010",
+  "customer": "Vikram Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-13T16:15",
+  "deliver_on": "2026-08-15",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0064",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-13T14:54",
+  "deliver_on": "2026-08-15",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 0,
+  "total": 480,
+  "due_now": 480,
+  "units": 1.0,
+  "amount_paid": 480,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0065",
+  "customer_id": "C010",
+  "customer": "Vikram Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-13T13:13",
+  "deliver_on": "2026-08-17",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1380,
+  "delivery_fee": 60,
+  "total": 1440,
+  "due_now": 1440,
+  "units": 3.0,
+  "amount_paid": 1440,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0066",
+  "customer_id": "C022",
+  "customer": "Simran Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-14T22:52",
+  "deliver_on": "2026-08-17",
+  "area": "Ejipura",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1480,
+  "delivery_fee": 0,
+  "total": 1480,
+  "due_now": 1480,
+  "units": 3.0,
+  "amount_paid": 1480,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0067",
+  "customer_id": "C017",
+  "customer": "Nikhil Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-08-14T09:08",
+  "deliver_on": "2026-08-17",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 700,
+  "delivery_fee": 120,
+  "total": 820,
+  "due_now": 820,
+  "units": 1.5,
+  "amount_paid": 820,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0068",
+  "customer_id": "C009",
+  "customer": "Tanya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-14T14:43",
+  "deliver_on": "2026-08-17",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 120,
+  "total": 570,
+  "due_now": 570,
+  "units": 1.0,
+  "amount_paid": 570,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0069",
+  "customer_id": "C024",
+  "customer": "Nandini Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-15T10:05",
+  "deliver_on": "2026-08-18",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 0,
+  "total": 220,
+  "due_now": 220,
+  "units": 0.5,
+  "amount_paid": 220,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0070",
+  "customer_id": "C006",
+  "customer": "Rohan Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-15T13:05",
+  "deliver_on": "2026-08-19",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 120,
+  "total": 570,
+  "due_now": 570,
+  "units": 1.0,
+  "amount_paid": 570,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0071",
+  "customer_id": "C027",
+  "customer": "Dev Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-15T15:53",
+  "deliver_on": "2026-08-17",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0072",
+  "customer_id": "C029",
+  "customer": "Kabir Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-15T16:48",
+  "deliver_on": "2026-08-17",
+  "area": "Indiranagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 0,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0073",
+  "customer_id": "C039",
+  "customer": "Ishaan Kulkarni",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-16T13:20",
+  "deliver_on": "2026-08-19",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 520,
+  "delivery_fee": 120,
+  "total": 640,
+  "due_now": 640,
+  "units": 1.0,
+  "amount_paid": 640,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0074",
+  "customer_id": "C026",
+  "customer": "Ritika Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-16T11:13",
+  "deliver_on": "2026-08-20",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 120,
+  "total": 2320,
+  "due_now": 1160,
+  "units": 4.0,
+  "amount_paid": 2320,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0075",
+  "customer_id": "C009",
+  "customer": "Tanya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-16T12:14",
+  "deliver_on": "2026-08-18",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 120,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0076",
+  "customer_id": "C046",
+  "customer": "Meghna Sharma",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-17T13:16",
+  "deliver_on": "2026-08-19",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2280,
+  "delivery_fee": 60,
+  "total": 2340,
+  "due_now": 1170,
+  "units": 4.0,
+  "amount_paid": 2340,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0077",
+  "customer_id": "C060",
+  "customer": "Ira Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-17T12:43",
+  "deliver_on": "2026-08-21",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1440,
+  "delivery_fee": 60,
+  "total": 1500,
+  "due_now": 1500,
+  "units": 3.0,
+  "amount_paid": 1500,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0078",
+  "customer_id": "C035",
+  "customer": "Sneha Sharma",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-17T11:02",
+  "deliver_on": "2026-08-19",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0079",
+  "customer_id": "C057",
+  "customer": "Aman Nair",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-17T09:51",
+  "deliver_on": "2026-08-20",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1160,
+  "delivery_fee": 120,
+  "total": 1280,
+  "due_now": 1280,
+  "units": 2.0,
+  "amount_paid": 1280,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0080",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-18T22:06",
+  "deliver_on": "2026-08-22",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 670,
+  "delivery_fee": 120,
+  "total": 790,
+  "due_now": 790,
+  "units": 1.5,
+  "amount_paid": 790,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0081",
+  "customer_id": "C052",
+  "customer": "Priya Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-08-18T18:51",
+  "deliver_on": "2026-08-22",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 120,
+  "total": 700,
+  "due_now": 700,
+  "units": 1.0,
+  "amount_paid": 700,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0082",
+  "customer_id": "C004",
+  "customer": "Kavya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-19T10:25",
+  "deliver_on": "2026-08-23",
+  "area": "Koramangala",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 0,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0083",
+  "customer_id": "C005",
+  "customer": "Aditi Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-20T12:12",
+  "deliver_on": "2026-08-24",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 60,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0084",
+  "customer_id": "C024",
+  "customer": "Nandini Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-20T13:53",
+  "deliver_on": "2026-08-22",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 0,
+  "total": 900,
+  "due_now": 900,
+  "units": 2.0,
+  "amount_paid": 900,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0085",
+  "customer_id": "C053",
+  "customer": "Rahul Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-08-20T15:42",
+  "deliver_on": "2026-08-22",
+  "area": "Ejipura",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 0,
+  "total": 220,
+  "due_now": 220,
+  "units": 0.5,
+  "amount_paid": 220,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0086",
+  "customer_id": "C058",
+  "customer": "Ritika Shetty",
+  "channel": "instagram",
+  "placed_at": "2026-08-21T12:16",
+  "deliver_on": "2026-08-23",
+  "area": "Domlur",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 0,
+  "total": 450,
+  "due_now": 450,
+  "units": 1.0,
+  "amount_paid": 450,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0087",
+  "customer_id": "C005",
+  "customer": "Aditi Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-21T09:19",
+  "deliver_on": "2026-08-24",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 520,
+  "delivery_fee": 60,
+  "total": 580,
+  "due_now": 580,
+  "units": 1.0,
+  "amount_paid": 580,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0088",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-21T18:40",
+  "deliver_on": "2026-08-23",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 120,
+  "total": 1200,
+  "due_now": 1200,
+  "units": 2.0,
+  "amount_paid": 1200,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0089",
+  "customer_id": "C022",
+  "customer": "Simran Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-21T16:39",
+  "deliver_on": "2026-08-23",
+  "area": "Ejipura",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 0,
+  "total": 1100,
+  "due_now": 1100,
+  "units": 2.0,
+  "amount_paid": 1100,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0090",
+  "customer_id": "C050",
+  "customer": "Shreya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-22T11:55",
+  "deliver_on": "2026-08-24",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0091",
+  "customer_id": "C019",
+  "customer": "Aarav Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-22T12:33",
+  "deliver_on": "2026-08-24",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 60,
+  "total": 2260,
+  "due_now": 1130,
+  "units": 4.0,
+  "amount_paid": 2260,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0092",
+  "customer_id": "C025",
+  "customer": "Aman Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-08-22T21:25",
+  "deliver_on": "2026-08-24",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1200,
+  "delivery_fee": 60,
+  "total": 1260,
+  "due_now": 1260,
+  "units": 2.0,
+  "amount_paid": 1260,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0093",
+  "customer_id": "C050",
+  "customer": "Shreya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-22T22:53",
+  "deliver_on": "2026-08-25",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2040,
+  "delivery_fee": 120,
+  "total": 2160,
+  "due_now": 1080,
+  "units": 4.0,
+  "amount_paid": 2160,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0094",
+  "customer_id": "C004",
+  "customer": "Kavya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-23T10:19",
+  "deliver_on": "2026-08-25",
+  "area": "Koramangala",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 0,
+  "total": 480,
+  "due_now": 480,
+  "units": 1.0,
+  "amount_paid": 480,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0095",
+  "customer_id": "C025",
+  "customer": "Aman Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-08-23T14:45",
+  "deliver_on": "2026-08-25",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 2260,
+  "delivery_fee": 60,
+  "total": 2320,
+  "due_now": 1160,
+  "units": 4.0,
+  "amount_paid": 2320,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0096",
+  "customer_id": "C013",
+  "customer": "Ananya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-24T15:56",
+  "deliver_on": "2026-08-26",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 0,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0097",
+  "customer_id": "C016",
+  "customer": "Divya Bhat",
+  "channel": "instagram",
+  "placed_at": "2026-08-26T09:42",
+  "deliver_on": "2026-08-28",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1410,
+  "delivery_fee": 0,
+  "total": 1410,
+  "due_now": 1410,
+  "units": 3.0,
+  "amount_paid": 1410,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0098",
+  "customer_id": "C037",
+  "customer": "Aditi Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-26T22:17",
+  "deliver_on": "2026-08-29",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 120,
+  "total": 570,
+  "due_now": 570,
+  "units": 1.0,
+  "amount_paid": 570,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0099",
+  "customer_id": "C017",
+  "customer": "Nikhil Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-08-26T14:00",
+  "deliver_on": "2026-08-29",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0100",
+  "customer_id": "C015",
+  "customer": "Siddharth Sharma",
+  "channel": "instagram",
+  "placed_at": "2026-08-27T18:53",
+  "deliver_on": "2026-08-29",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 120,
+  "total": 340,
+  "due_now": 340,
+  "units": 0.5,
+  "amount_paid": 340,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0101",
+  "customer_id": "C046",
+  "customer": "Meghna Sharma",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-28T21:20",
+  "deliver_on": "2026-08-30",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2740,
+  "delivery_fee": 60,
+  "total": 2800,
+  "due_now": 1400,
+  "units": 5.0,
+  "amount_paid": 2800,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0102",
+  "customer_id": "C014",
+  "customer": "Meghna Menon",
+  "channel": "instagram",
+  "placed_at": "2026-08-28T11:55",
+  "deliver_on": "2026-08-31",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 890,
+  "delivery_fee": 120,
+  "total": 1010,
+  "due_now": 1010,
+  "units": 2.0,
+  "amount_paid": 1010,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0103",
+  "customer_id": "C065",
+  "customer": "Riya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-28T15:13",
+  "deliver_on": "2026-08-31",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 0,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0104",
+  "customer_id": "C034",
+  "customer": "Arjun Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-29T13:56",
+  "deliver_on": "2026-09-01",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1380,
+  "delivery_fee": 60,
+  "total": 1440,
+  "due_now": 1440,
+  "units": 2.5,
+  "amount_paid": 1440,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0105",
+  "customer_id": "C059",
+  "customer": "Dev Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-30T22:22",
+  "deliver_on": "2026-09-01",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1020,
+  "delivery_fee": 120,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0106",
+  "customer_id": "C022",
+  "customer": "Simran Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-08-30T18:47",
+  "deliver_on": "2026-09-01",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0107",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-03T21:21",
+  "deliver_on": "2026-09-05",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1640,
+  "delivery_fee": 60,
+  "total": 1700,
+  "due_now": 850,
+  "units": 3.0,
+  "amount_paid": 1700,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0108",
+  "customer_id": "C035",
+  "customer": "Sneha Sharma",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-03T18:14",
+  "deliver_on": "2026-09-05",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1500,
+  "delivery_fee": 120,
+  "total": 1620,
+  "due_now": 810,
+  "units": 3.0,
+  "amount_paid": 1620,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0109",
+  "customer_id": "C015",
+  "customer": "Siddharth Sharma",
+  "channel": "instagram",
+  "placed_at": "2026-09-04T17:29",
+  "deliver_on": "2026-09-08",
+  "area": "Ejipura",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1600,
+  "delivery_fee": 0,
+  "total": 1600,
+  "due_now": 800,
+  "units": 3.0,
+  "amount_paid": 1600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0110",
+  "customer_id": "C009",
+  "customer": "Tanya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-04T09:22",
+  "deliver_on": "2026-09-06",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1380,
+  "delivery_fee": 120,
+  "total": 1500,
+  "due_now": 1500,
+  "units": 2.5,
+  "amount_paid": 1500,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0111",
+  "customer_id": "C048",
+  "customer": "Divya Sharma",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-04T20:14",
+  "deliver_on": "2026-09-06",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1650,
+  "delivery_fee": 60,
+  "total": 1710,
+  "due_now": 855,
+  "units": 3.0,
+  "amount_paid": 1710,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0112",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-05T19:17",
+  "deliver_on": "2026-09-07",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 990,
+  "delivery_fee": 120,
+  "total": 1110,
+  "due_now": 1110,
+  "units": 2.0,
+  "amount_paid": 1110,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0113",
+  "customer_id": "C029",
+  "customer": "Kabir Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-05T09:21",
+  "deliver_on": "2026-09-07",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 60,
+  "total": 2260,
+  "due_now": 1130,
+  "units": 4.0,
+  "amount_paid": 2260,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0114",
+  "customer_id": "C004",
+  "customer": "Kavya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-06T14:49",
+  "deliver_on": "2026-09-08",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0115",
+  "customer_id": "C011",
+  "customer": "Pooja Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-06T19:36",
+  "deliver_on": "2026-09-08",
+  "area": "Ejipura",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 0,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0116",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-06T19:21",
+  "deliver_on": "2026-09-09",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0117",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-07T22:22",
+  "deliver_on": "2026-09-09",
+  "area": "HSR Layout",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 0,
+  "total": 2200,
+  "due_now": 1100,
+  "units": 4.0,
+  "amount_paid": 2200,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0118",
+  "customer_id": "C014",
+  "customer": "Meghna Menon",
+  "channel": "instagram",
+  "placed_at": "2026-09-08T13:28",
+  "deliver_on": "2026-09-10",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 3100,
+  "delivery_fee": 120,
+  "total": 3220,
+  "due_now": 1610,
+  "units": 6.0,
+  "amount_paid": 3220,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0119",
+  "customer_id": "C025",
+  "customer": "Aman Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-09T14:13",
+  "deliver_on": "2026-09-13",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0120",
+  "customer_id": "C028",
+  "customer": "Ira Pillai",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-09T15:51",
+  "deliver_on": "2026-09-12",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 60,
+  "total": 280,
+  "due_now": 280,
+  "units": 0.5,
+  "amount_paid": 280,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0121",
+  "customer_id": "C023",
+  "customer": "Varun Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-09T13:42",
+  "deliver_on": "2026-09-11",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0122",
+  "customer_id": "C049",
+  "customer": "Nikhil Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-10T17:58",
+  "deliver_on": "2026-09-12",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 0,
+  "total": 480,
+  "due_now": 480,
+  "units": 1.0,
+  "amount_paid": 480,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0123",
+  "customer_id": "C038",
+  "customer": "Rohan Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-10T19:33",
+  "deliver_on": "2026-09-12",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1160,
+  "delivery_fee": 120,
+  "total": 1280,
+  "due_now": 1280,
+  "units": 2.0,
+  "amount_paid": 1280,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0124",
+  "customer_id": "C012",
+  "customer": "Karan Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-11T15:47",
+  "deliver_on": "2026-09-13",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0125",
+  "customer_id": "C019",
+  "customer": "Aarav Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-11T19:37",
+  "deliver_on": "2026-09-15",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0126",
+  "customer_id": "C019",
+  "customer": "Aarav Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-11T22:11",
+  "deliver_on": "2026-09-15",
+  "area": "Defence Colony",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 3,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1440,
+  "delivery_fee": 0,
+  "total": 1440,
+  "due_now": 1440,
+  "units": 3.0,
+  "amount_paid": 1440,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0127",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-11T20:47",
+  "deliver_on": "2026-09-13",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 120,
+  "total": 1020,
+  "due_now": 1020,
+  "units": 2.0,
+  "amount_paid": 1020,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0128",
+  "customer_id": "C013",
+  "customer": "Ananya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-12T17:52",
+  "deliver_on": "2026-09-15",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 0,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0129",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-12T11:16",
+  "deliver_on": "2026-09-16",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1060,
+  "delivery_fee": 0,
+  "total": 1060,
+  "due_now": 1060,
+  "units": 2.0,
+  "amount_paid": 1060,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0130",
+  "customer_id": "C024",
+  "customer": "Nandini Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-13T20:42",
+  "deliver_on": "2026-09-15",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1040,
+  "delivery_fee": 60,
+  "total": 1100,
+  "due_now": 1100,
+  "units": 2.0,
+  "amount_paid": 1100,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0131",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-13T14:37",
+  "deliver_on": "2026-09-17",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0132",
+  "customer_id": "C017",
+  "customer": "Nikhil Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-09-14T14:50",
+  "deliver_on": "2026-09-16",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0133",
+  "customer_id": "C034",
+  "customer": "Arjun Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-14T10:14",
+  "deliver_on": "2026-09-16",
+  "area": "Indiranagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1200,
+  "delivery_fee": 0,
+  "total": 1200,
+  "due_now": 1200,
+  "units": 2.0,
+  "amount_paid": 1200,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0134",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-15T16:24",
+  "deliver_on": "2026-09-19",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 120,
+  "total": 1200,
+  "due_now": 1200,
+  "units": 2.0,
+  "amount_paid": 1200,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0135",
+  "customer_id": "C009",
+  "customer": "Tanya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-15T11:13",
+  "deliver_on": "2026-09-17",
+  "area": "CV Raman Nagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 0,
+  "total": 220,
+  "due_now": 220,
+  "units": 0.5,
+  "amount_paid": 220,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0136",
+  "customer_id": "C032",
+  "customer": "Yash Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-09-16T20:33",
+  "deliver_on": "2026-09-19",
+  "area": "Indiranagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 0,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0137",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-16T12:06",
+  "deliver_on": "2026-09-18",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 60,
+  "total": 960,
+  "due_now": 960,
+  "units": 2.0,
+  "amount_paid": 960,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0138",
+  "customer_id": "C028",
+  "customer": "Ira Pillai",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-17T20:13",
+  "deliver_on": "2026-09-19",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0139",
+  "customer_id": "C070",
+  "customer": "Rohan Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-17T16:46",
+  "deliver_on": "2026-09-19",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0140",
+  "customer_id": "C023",
+  "customer": "Varun Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-18T15:34",
+  "deliver_on": "2026-09-21",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1200,
+  "delivery_fee": 120,
+  "total": 1320,
+  "due_now": 1320,
+  "units": 2.0,
+  "amount_paid": 1320,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0141",
+  "customer_id": "C010",
+  "customer": "Vikram Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-18T12:54",
+  "deliver_on": "2026-09-20",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0142",
+  "customer_id": "C063",
+  "customer": "Zoya Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-18T16:44",
+  "deliver_on": "2026-09-20",
+  "area": "Domlur",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2180,
+  "delivery_fee": 0,
+  "total": 2180,
+  "due_now": 1090,
+  "units": 4.0,
+  "amount_paid": 2180,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0143",
+  "customer_id": "C004",
+  "customer": "Kavya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-18T22:31",
+  "deliver_on": "2026-09-20",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 520,
+  "delivery_fee": 120,
+  "total": 640,
+  "due_now": 640,
+  "units": 1.0,
+  "amount_paid": 640,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0144",
+  "customer_id": "C029",
+  "customer": "Kabir Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-19T21:04",
+  "deliver_on": "2026-09-22",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0145",
+  "customer_id": "C060",
+  "customer": "Ira Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-19T21:32",
+  "deliver_on": "2026-09-21",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0146",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-19T19:42",
+  "deliver_on": "2026-09-22",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0147",
+  "customer_id": "C061",
+  "customer": "Kabir Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-19T09:54",
+  "deliver_on": "2026-09-21",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 120,
+  "total": 1020,
+  "due_now": 1020,
+  "units": 2.0,
+  "amount_paid": 1020,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0148",
+  "customer_id": "C020",
+  "customer": "Priya Kulkarni",
+  "channel": "instagram",
+  "placed_at": "2026-09-20T20:06",
+  "deliver_on": "2026-09-24",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 120,
+  "total": 700,
+  "due_now": 700,
+  "units": 1.0,
+  "amount_paid": 700,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0149",
+  "customer_id": "C018",
+  "customer": "Shreya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-20T17:57",
+  "deliver_on": "2026-09-24",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0150",
+  "customer_id": "C014",
+  "customer": "Meghna Menon",
+  "channel": "instagram",
+  "placed_at": "2026-09-20T11:24",
+  "deliver_on": "2026-09-22",
+  "area": "Koramangala",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 520,
+  "delivery_fee": 0,
+  "total": 520,
+  "due_now": 520,
+  "units": 1.0,
+  "amount_paid": 520,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0151",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-22T13:59",
+  "deliver_on": "2026-09-25",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 120,
+  "total": 2320,
+  "due_now": 1160,
+  "units": 4.0,
+  "amount_paid": 2320,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0152",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-22T22:07",
+  "deliver_on": "2026-09-24",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 120,
+  "total": 700,
+  "due_now": 700,
+  "units": 1.0,
+  "amount_paid": 700,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0153",
+  "customer_id": "C004",
+  "customer": "Kavya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-22T20:12",
+  "deliver_on": "2026-09-25",
+  "area": "Koramangala",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 0,
+  "total": 1100,
+  "due_now": 1100,
+  "units": 2.0,
+  "amount_paid": 1100,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0154",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-23T19:54",
+  "deliver_on": "2026-09-25",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 670,
+  "delivery_fee": 120,
+  "total": 790,
+  "due_now": 790,
+  "units": 1.5,
+  "amount_paid": 790,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0155",
+  "customer_id": "C032",
+  "customer": "Yash Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-09-23T19:52",
+  "deliver_on": "2026-09-26",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0156",
+  "customer_id": "C014",
+  "customer": "Meghna Menon",
+  "channel": "instagram",
+  "placed_at": "2026-09-23T18:51",
+  "deliver_on": "2026-09-26",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 520,
+  "delivery_fee": 120,
+  "total": 640,
+  "due_now": 640,
+  "units": 1.0,
+  "amount_paid": 640,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0157",
+  "customer_id": "C067",
+  "customer": "Sneha Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-24T11:06",
+  "deliver_on": "2026-09-27",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 580,
+  "delivery_fee": 0,
+  "total": 580,
+  "due_now": 580,
+  "units": 1.0,
+  "amount_paid": 580,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0158",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-24T20:56",
+  "deliver_on": "2026-09-28",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0159",
+  "customer_id": "C006",
+  "customer": "Rohan Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-24T15:08",
+  "deliver_on": "2026-09-26",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 120,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0160",
+  "customer_id": "C005",
+  "customer": "Aditi Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-25T22:37",
+  "deliver_on": "2026-09-27",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0161",
+  "customer_id": "C009",
+  "customer": "Tanya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-25T15:03",
+  "deliver_on": "2026-09-28",
+  "area": "CV Raman Nagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 0,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0162",
+  "customer_id": "C020",
+  "customer": "Priya Kulkarni",
+  "channel": "instagram",
+  "placed_at": "2026-09-25T19:42",
+  "deliver_on": "2026-09-28",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 0,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0163",
+  "customer_id": "C034",
+  "customer": "Arjun Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-26T17:57",
+  "deliver_on": "2026-09-28",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 60,
+  "total": 2260,
+  "due_now": 1130,
+  "units": 4.0,
+  "amount_paid": 2260,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0164",
+  "customer_id": "C014",
+  "customer": "Meghna Menon",
+  "channel": "instagram",
+  "placed_at": "2026-09-26T12:24",
+  "deliver_on": "2026-09-29",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0165",
+  "customer_id": "C049",
+  "customer": "Nikhil Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-26T17:09",
+  "deliver_on": "2026-09-29",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 60,
+  "total": 280,
+  "due_now": 280,
+  "units": 0.5,
+  "amount_paid": 280,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0166",
+  "customer_id": "C034",
+  "customer": "Arjun Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-26T19:51",
+  "deliver_on": "2026-09-28",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0167",
+  "customer_id": "C065",
+  "customer": "Riya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-26T18:21",
+  "deliver_on": "2026-09-28",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 3,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1440,
+  "delivery_fee": 0,
+  "total": 1440,
+  "due_now": 1440,
+  "units": 3.0,
+  "amount_paid": 1440,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0168",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-27T10:39",
+  "deliver_on": "2026-09-29",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 120,
+  "total": 1020,
+  "due_now": 1020,
+  "units": 2.0,
+  "amount_paid": 1020,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0169",
+  "customer_id": "C037",
+  "customer": "Aditi Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-27T21:25",
+  "deliver_on": "2026-09-30",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 890,
+  "delivery_fee": 120,
+  "total": 1010,
+  "due_now": 1010,
+  "units": 2.0,
+  "amount_paid": 1010,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0170",
+  "customer_id": "C070",
+  "customer": "Rohan Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-27T12:52",
+  "deliver_on": "2026-09-29",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1660,
+  "delivery_fee": 120,
+  "total": 1780,
+  "due_now": 890,
+  "units": 3.0,
+  "amount_paid": 1780,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0171",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-27T17:41",
+  "deliver_on": "2026-09-29",
+  "area": "HSR Layout",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2180,
+  "delivery_fee": 0,
+  "total": 2180,
+  "due_now": 1090,
+  "units": 4.0,
+  "amount_paid": 2180,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0172",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-28T17:30",
+  "deliver_on": "2026-09-30",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2680,
+  "delivery_fee": 120,
+  "total": 2800,
+  "due_now": 1400,
+  "units": 5.0,
+  "amount_paid": 2800,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0173",
+  "customer_id": "C029",
+  "customer": "Kabir Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-28T21:02",
+  "deliver_on": "2026-10-02",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0174",
+  "customer_id": "C040",
+  "customer": "Neha Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-09-29T16:15",
+  "deliver_on": "2026-10-01",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0175",
+  "customer_id": "C005",
+  "customer": "Aditi Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-09-29T11:12",
+  "deliver_on": "2026-10-01",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0176",
+  "customer_id": "C053",
+  "customer": "Rahul Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-09-29T21:47",
+  "deliver_on": "2026-10-01",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": true
+   },
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1520,
+  "delivery_fee": 120,
+  "total": 1640,
+  "due_now": 820,
+  "units": 3.0,
+  "amount_paid": 1640,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0177",
+  "customer_id": "C058",
+  "customer": "Ritika Shetty",
+  "channel": "instagram",
+  "placed_at": "2026-09-30T18:14",
+  "deliver_on": "2026-10-02",
+  "area": "Domlur",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1380,
+  "delivery_fee": 0,
+  "total": 1380,
+  "due_now": 1380,
+  "units": 3.0,
+  "amount_paid": 1380,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0178",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-01T20:54",
+  "deliver_on": "2026-10-05",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 120,
+  "total": 1220,
+  "due_now": 1220,
+  "units": 2.0,
+  "amount_paid": 1220,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0179",
+  "customer_id": "C029",
+  "customer": "Kabir Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-01T15:04",
+  "deliver_on": "2026-10-03",
+  "area": "Indiranagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 920,
+  "delivery_fee": 0,
+  "total": 920,
+  "due_now": 920,
+  "units": 2.0,
+  "amount_paid": 920,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0180",
+  "customer_id": "C005",
+  "customer": "Aditi Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-01T10:44",
+  "deliver_on": "2026-10-04",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0181",
+  "customer_id": "C006",
+  "customer": "Rohan Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-01T15:03",
+  "deliver_on": "2026-10-03",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 440,
+  "delivery_fee": 120,
+  "total": 560,
+  "due_now": 560,
+  "units": 1.0,
+  "amount_paid": 560,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0182",
+  "customer_id": "C037",
+  "customer": "Aditi Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-02T10:55",
+  "deliver_on": "2026-10-04",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1160,
+  "delivery_fee": 120,
+  "total": 1280,
+  "due_now": 1280,
+  "units": 2.0,
+  "amount_paid": 1280,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0183",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-02T11:13",
+  "deliver_on": "2026-10-04",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2200,
+  "delivery_fee": 120,
+  "total": 2320,
+  "due_now": 1160,
+  "units": 4.0,
+  "amount_paid": 2320,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0184",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-03T16:28",
+  "deliver_on": "2026-10-05",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 120,
+  "total": 570,
+  "due_now": 570,
+  "units": 1.0,
+  "amount_paid": 570,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0185",
+  "customer_id": "C019",
+  "customer": "Aarav Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-03T10:33",
+  "deliver_on": "2026-10-05",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0186",
+  "customer_id": "C041",
+  "customer": "Tanya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-03T20:50",
+  "deliver_on": "2026-10-05",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0187",
+  "customer_id": "C011",
+  "customer": "Pooja Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-03T13:16",
+  "deliver_on": "2026-10-05",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 980,
+  "delivery_fee": 120,
+  "total": 1100,
+  "due_now": 1100,
+  "units": 2.0,
+  "amount_paid": 1100,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0188",
+  "customer_id": "C052",
+  "customer": "Priya Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-10-04T20:51",
+  "deliver_on": "2026-10-06",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 2400,
+  "delivery_fee": 120,
+  "total": 2520,
+  "due_now": 1260,
+  "units": 4.0,
+  "amount_paid": 2520,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0189",
+  "customer_id": "C032",
+  "customer": "Yash Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-10-04T15:44",
+  "deliver_on": "2026-10-07",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1620,
+  "delivery_fee": 60,
+  "total": 1680,
+  "due_now": 840,
+  "units": 3.0,
+  "amount_paid": 1680,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0190",
+  "customer_id": "C026",
+  "customer": "Ritika Kapoor",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-04T09:01",
+  "deliver_on": "2026-10-06",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 440,
+  "delivery_fee": 120,
+  "total": 560,
+  "due_now": 560,
+  "units": 1.0,
+  "amount_paid": 560,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0191",
+  "customer_id": "C005",
+  "customer": "Aditi Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-04T11:10",
+  "deliver_on": "2026-10-06",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 890,
+  "delivery_fee": 60,
+  "total": 950,
+  "due_now": 950,
+  "units": 2.0,
+  "amount_paid": 950,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0192",
+  "customer_id": "C034",
+  "customer": "Arjun Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-05T17:46",
+  "deliver_on": "2026-10-07",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0193",
+  "customer_id": "C067",
+  "customer": "Sneha Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-05T10:17",
+  "deliver_on": "2026-10-08",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 0,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0194",
+  "customer_id": "C017",
+  "customer": "Nikhil Reddy",
+  "channel": "instagram",
+  "placed_at": "2026-10-05T18:29",
+  "deliver_on": "2026-10-09",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 120,
+  "total": 1020,
+  "due_now": 1020,
+  "units": 2.0,
+  "amount_paid": 1020,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0195",
+  "customer_id": "C067",
+  "customer": "Sneha Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-05T20:03",
+  "deliver_on": "2026-10-07",
+  "area": "Ulsoor",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1160,
+  "delivery_fee": 0,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0196",
+  "customer_id": "C018",
+  "customer": "Shreya Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-05T20:58",
+  "deliver_on": "2026-10-07",
+  "area": "Indiranagar",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 440,
+  "delivery_fee": 0,
+  "total": 440,
+  "due_now": 440,
+  "units": 1.0,
+  "amount_paid": 440,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0197",
+  "customer_id": "C001",
+  "customer": "Riya Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-06T10:51",
+  "deliver_on": "2026-10-10",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 120,
+  "total": 660,
+  "due_now": 660,
+  "units": 1.0,
+  "amount_paid": 660,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0198",
+  "customer_id": "C031",
+  "customer": "Zoya Kulkarni",
+  "channel": "instagram",
+  "placed_at": "2026-10-06T21:39",
+  "deliver_on": "2026-10-08",
+  "area": "Domlur",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0199",
+  "customer_id": "C056",
+  "customer": "Nandini Bhat",
+  "channel": "instagram",
+  "placed_at": "2026-10-06T20:00",
+  "deliver_on": "2026-10-09",
+  "area": "Indiranagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2000,
+  "delivery_fee": 60,
+  "total": 2060,
+  "due_now": 1030,
+  "units": 4.0,
+  "amount_paid": 2060,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0200",
+  "customer_id": "C007",
+  "customer": "Ishaan Bhat",
+  "channel": "instagram",
+  "placed_at": "2026-10-06T20:12",
+  "deliver_on": "2026-10-10",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 120,
+  "total": 570,
+  "due_now": 570,
+  "units": 1.0,
+  "amount_paid": 570,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0201",
+  "customer_id": "C013",
+  "customer": "Ananya Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-07T21:48",
+  "deliver_on": "2026-10-09",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 60,
+  "total": 540,
+  "due_now": 540,
+  "units": 1.0,
+  "amount_paid": 540,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0202",
+  "customer_id": "C014",
+  "customer": "Meghna Menon",
+  "channel": "instagram",
+  "placed_at": "2026-10-07T15:48",
+  "deliver_on": "2026-10-09",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 960,
+  "delivery_fee": 120,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0203",
+  "customer_id": "C024",
+  "customer": "Nandini Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-07T13:34",
+  "deliver_on": "2026-10-10",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0204",
+  "customer_id": "C051",
+  "customer": "Aarav Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-07T09:34",
+  "deliver_on": "2026-10-11",
+  "area": "Domlur",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 60,
+  "total": 280,
+  "due_now": 280,
+  "units": 0.5,
+  "amount_paid": 280,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0205",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-08T12:31",
+  "deliver_on": "2026-10-10",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0206",
+  "customer_id": "C024",
+  "customer": "Nandini Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-08T12:23",
+  "deliver_on": "2026-10-11",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 540,
+  "delivery_fee": 60,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0207",
+  "customer_id": "C007",
+  "customer": "Ishaan Bhat",
+  "channel": "instagram",
+  "placed_at": "2026-10-08T14:03",
+  "deliver_on": "2026-10-10",
+  "area": "Jeevan Bima Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": false
+   },
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1740,
+  "delivery_fee": 120,
+  "total": 1860,
+  "due_now": 930,
+  "units": 3.0,
+  "amount_paid": 1860,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0208",
+  "customer_id": "C015",
+  "customer": "Siddharth Sharma",
+  "channel": "instagram",
+  "placed_at": "2026-10-09T11:17",
+  "deliver_on": "2026-10-13",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 900,
+  "delivery_fee": 120,
+  "total": 1020,
+  "due_now": 1020,
+  "units": 2.0,
+  "amount_paid": 1020,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0209",
+  "customer_id": "C027",
+  "customer": "Dev Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-09T21:21",
+  "deliver_on": "2026-10-13",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "CT6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1540,
+  "delivery_fee": 120,
+  "total": 1660,
+  "due_now": 830,
+  "units": 3.0,
+  "amount_paid": 830,
+  "payment_status": "advance_paid",
+  "paid_via": "link_after_reminder",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0210",
+  "customer_id": "C022",
+  "customer": "Simran Rao",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-09T16:34",
+  "deliver_on": "2026-10-11",
+  "area": "Ejipura",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CT6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 480,
+  "delivery_fee": 120,
+  "total": 600,
+  "due_now": 600,
+  "units": 1.0,
+  "amount_paid": 600,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0211",
+  "customer_id": "C009",
+  "customer": "Tanya Reddy",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-10T12:52",
+  "deliver_on": "2026-10-12",
+  "area": "CV Raman Nagar",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 220,
+  "delivery_fee": 120,
+  "total": 340,
+  "due_now": 340,
+  "units": 0.5,
+  "amount_paid": 340,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0212",
+  "customer_id": "C049",
+  "customer": "Nikhil Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-10T12:53",
+  "deliver_on": "2026-10-12",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "delivered"
+ },
+ {
+  "id": "M-0213",
+  "customer_id": "C012",
+  "customer": "Karan Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-10T16:44",
+  "deliver_on": "2026-10-13",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 440,
+  "delivery_fee": 120,
+  "total": 560,
+  "due_now": 560,
+  "units": 1.0,
+  "amount_paid": 560,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0214",
+  "customer_id": "C060",
+  "customer": "Ira Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-10T12:22",
+  "deliver_on": "2026-10-14",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1100,
+  "delivery_fee": 60,
+  "total": 1160,
+  "due_now": 1160,
+  "units": 2.0,
+  "amount_paid": 1160,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0215",
+  "customer_id": "C008",
+  "customer": "Neha Iyer",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-11T17:00",
+  "deliver_on": "2026-10-13",
+  "area": "HSR Layout",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 120,
+  "total": 1200,
+  "due_now": 1200,
+  "units": 2.0,
+  "amount_paid": 1200,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0216",
+  "customer_id": "C028",
+  "customer": "Ira Pillai",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-11T09:14",
+  "deliver_on": "2026-10-13",
+  "area": "HAL 2nd Stage",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 0,
+  "total": 1080,
+  "due_now": 1080,
+  "units": 2.0,
+  "amount_paid": 1080,
+  "payment_status": "paid",
+  "paid_via": "link_after_reminder",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0217",
+  "customer_id": "C012",
+  "customer": "Karan Bhat",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-11T21:12",
+  "deliver_on": "2026-10-14",
+  "area": "Ulsoor",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 1,
+    "eggless": false
+   }
+  ],
+  "subtotal": 450,
+  "delivery_fee": 120,
+  "total": 570,
+  "due_now": 570,
+  "units": 1.0,
+  "amount_paid": 570,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0218",
+  "customer_id": "C037",
+  "customer": "Aditi Gowda",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-11T22:45",
+  "deliver_on": "2026-10-14",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 1,
+    "eggless": true
+   },
+   {
+    "sku": "EV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1480,
+  "delivery_fee": 120,
+  "total": 1600,
+  "due_now": 800,
+  "units": 3.0,
+  "amount_paid": 800,
+  "payment_status": "advance_paid",
+  "paid_via": "link",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0219",
+  "customer_id": "C019",
+  "customer": "Aarav Menon",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-11T13:58",
+  "deliver_on": "2026-10-13",
+  "area": "Defence Colony",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1080,
+  "delivery_fee": 60,
+  "total": 1140,
+  "due_now": 1140,
+  "units": 2.0,
+  "amount_paid": 1140,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0220",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-10-12T10:14",
+  "deliver_on": "2026-10-14",
+  "area": "Old Airport Road",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1160,
+  "delivery_fee": 60,
+  "total": 1220,
+  "due_now": 1220,
+  "units": 2.0,
+  "amount_paid": 1220,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0221",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-10-12T18:47",
+  "deliver_on": "2026-10-15",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "RV6",
+    "qty": 2,
+    "eggless": false
+   },
+   {
+    "sku": "BCJ",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1520,
+  "delivery_fee": 0,
+  "total": 1520,
+  "due_now": 760,
+  "units": 3.0,
+  "amount_paid": 760,
+  "payment_status": "advance_paid",
+  "paid_via": "link_after_reminder",
+  "status": "confirmed"
+ },
+ {
+  "id": "M-0222",
+  "customer_id": "C016",
+  "customer": "Divya Bhat",
+  "channel": "instagram",
+  "placed_at": "2026-10-12T22:49",
+  "deliver_on": "2026-10-15",
+  "area": "Old Airport Road",
+  "fulfilment": "pickup",
+  "lines": [
+   {
+    "sku": "EV6",
+    "qty": 3,
+    "eggless": false
+   }
+  ],
+  "subtotal": 1350,
+  "delivery_fee": 0,
+  "total": 1350,
+  "due_now": 1350,
+  "units": 3.0,
+  "amount_paid": 1350,
+  "payment_status": "paid",
+  "paid_via": "link",
+  "status": "confirmed",
+  "payments": [
+   {
+    "id": "pay_T3stRealUPI01",
+    "amount": 1350,
+    "method": "upi",
+    "utr": "731204558812",
+    "at": "2026-10-12T22:49"
+   }
+  ]
+ },
+ {
+  "id": "M-0223",
+  "customer_id": "C002",
+  "customer": "Arjun Shetty",
+  "channel": "whatsapp",
+  "placed_at": "2026-10-12T20:41",
+  "deliver_on": "2026-10-14",
+  "area": "Koramangala",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "CC1",
+    "qty": 1,
+    "eggless": true
+   }
+  ],
+  "subtotal": 1200,
+  "delivery_fee": 120,
+  "total": 1320,
+  "due_now": 1320,
+  "units": 2.0,
+  "amount_paid": 0,
+  "payment_status": "unpaid",
+  "paid_via": null,
+  "status": "awaiting_payment",
+  "payment_link": {
+   "id": "plink_T4rjunCake1",
+   "amount": 1320,
+   "status": "created",
+   "created_at": "2026-10-12T10:00",
+   "url": "/pay/plink_T4rjunCake1"
+  }
+ },
+ {
+  "id": "M-0224",
+  "customer_id": "C003",
+  "customer": "Sneha Iyer",
+  "channel": "instagram",
+  "placed_at": "2026-10-11T23:05",
+  "deliver_on": "2026-10-16",
+  "area": "Domlur",
+  "fulfilment": "delivery",
+  "lines": [
+   {
+    "sku": "DH",
+    "qty": 2,
+    "eggless": false
+   }
+  ],
+  "subtotal": 2998,
+  "delivery_fee": 60,
+  "total": 3058,
+  "due_now": 1529,
+  "units": 4.0,
+  "amount_paid": 0,
+  "payment_status": "unpaid",
+  "paid_via": null,
+  "status": "awaiting_payment",
+  "payment_link": {
+   "id": "plink_T5nehaHamp2",
+   "amount": 1529,
+   "status": "created",
+   "created_at": "2026-10-11T23:00",
+   "url": "/pay/plink_T5nehaHamp2"
+  }
+ }
+]

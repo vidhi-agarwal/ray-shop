@@ -1,0 +1,11 @@
+.venv/
+node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.env
+runs/
+backend/eval/results/*.json
+.DS_Store
+.vercel/
+.claude/
