@@ -12,6 +12,40 @@
 | Record compiled | Tue 13 Oct 2026, about 18:10 IST; updated about 21:45 IST with the Claude Code session (RS-29 to RS-45); cleaned up about 22:20 IST (voice, tags and cross-references made consistent) |
 | Writing rules in force | No em dashes. Synthetic data is labelled synthetic. Prices and money are never set by AI. |
 
+## Build log summary
+
+The five items the submission form asks for, with pointers to the full record below.
+
+**1. AI tools and models**
+- Claude in claude.ai chat: research, ideation, PM question prep, positioning, long documents (Claude Docs) and the first two prototypes (RS-01 to RS-28). One Claude subagent acted as a demanding Razorpay judge (RS-25).
+- Claude Code desktop app, model Claude Opus 5.5: final prototype, Razorpay-style UI, static Vercel build, growth insights and submission files (RS-29 to RS-45).
+- Inside the product: Claude via the Claude Agent SDK (model alias `sonnet`) runs RAY Shop's agent (Part C2).
+- Non-AI tools: Python, FastAPI, React and Vite, Pillow (synthetic images), Playwright and ffmpeg (video), GitHub, Vercel.
+
+**2. Key prompts, workflows and agent setup**
+- Every prompt I gave is quoted verbatim in Part B. Turning points: RS-06 (use AI only where rules or a simple ML model cannot do the job), RS-18 (pivot to sellers with no storefront), RS-26 (deliverables), RS-33 to RS-35 (fewer clicks for judges).
+- Workflow: research, ideas tested against an AI-fit bar, validation with a Razorpay PM, build, eval, independent judge review, fixes, deploy, live check after every deploy.
+- Agent setup: 15 tools, 4 of them gated behind the seller's approval; no shell or file tools; a money guard blocks any amount not from the menu or a quote; rules code, not AI, does all pricing (Parts C2 and C3).
+
+**3. One AI output I corrected, and why**
+- The first money guard let a wrong "Rs 500" through in a customer message, because a different order happened to have that amount. A wrong price reaching a customer breaks trust, so the guard was scoped to that customer's own order and the menu, and a test now covers it (RS-19; `test_link_amount_comes_from_quote_and_guard_blocks_invented_amounts`).
+- Other corrections: a review pass fixed 12 overstated claims in Claude's own product doc (RS-25); the Diwali hamper was wrongly tagged "candidate to drop" (RS-39).
+
+**4. What AI did versus what I decided**
+- I decided: the problem space and every pivot (D2C over kirana, the AI-fit bar, dropping Clear-to-Settle after the PM's feedback, moving to sellers with no storefront); the name RAY Shop; the rule that code, not AI, sets every price; static hosting; the Razorpay-like look; the one-click demo; which insights to show; the one-pager style. I ran the PM conversation and the seller interview myself.
+- Claude did: research and first drafts, writing and debugging the code, synthetic data, evals, UI build, deploy commands (with my approval), and checking every number.
+- Part F logs who made each decision.
+
+**5. Known limitations, risks and verification**
+- All data is synthetic. The prototype has not been tested with real sellers yet; one problem interview so far (G3).
+- Razorpay test-mode payment links are coded but never run with real keys; the demo uses a clearly labelled mock checkout.
+- The hosted demo replays one recorded AI run, which has three known wording slips (C7).
+- The eval is small: 11 cases, 11/11 in two separate runs (C6); 14 rule tests (C5).
+- Risks: DPDP consent for customer messages; RAY can verify only payments made through Razorpay; settlement timing.
+- Verification: amounts checked by hand, an independent judge review, and the live site checked after each deploy (G5).
+
+---
+
 ## 0. Sources and availability legend
 
 Every entry is tagged with where its content comes from.
@@ -523,7 +557,7 @@ Menu read and shop published; Rs 1,180 quote, link, payment confirmed; fake scre
 | Shuru: Product Note, Video Script and Submission Kit | dc46adc7-3e64-41d6-a17e-217f777484c2 | 13 Oct | Superseded by the Submission Kit |
 | RAY Shop: The Final Idea | 0c0a738d-707e-4cd2-aac4-eae427d82138 | 13 Oct | Current (long version) |
 | RAY Shop: Submission Kit | ec7f9130-0ccb-4ba7-849d-6ed52a2faa76 | 13 Oct | Superseded by the RS-41 to RS-43 files |
-| `BUILD_LOG.md` (summary plus dated log) | repo file | 13 Oct | Current AI build log, public |
+| `BUILD_LOG.md` (this file: summary plus full record) | repo file | 13 Oct | Current AI build log, public |
 | `submission/RAY-Shop-one-pager.pdf` (and `one-pager.html`) | repo file | 13 Oct | Current one-pager (RS-43) |
 | `submission/video-script.md` | repo file | 13 Oct | Current video script (RS-41) |
 | `README.md` | repo file | 13 Oct | Live demo links, Meet Meera, run and deploy steps (Vercel and Docker) |
