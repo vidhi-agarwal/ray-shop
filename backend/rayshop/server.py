@@ -106,7 +106,7 @@ class ReplaySession:
 
 
 class Session:
-    def __init__(self, mode: str, recording: str | None):
+    def __init__(self, mode: str, recording: str | None, speed: float | None = None):
         self.id = uuid.uuid4().hex[:10]
         self.mode = mode
         self.store = Store()
@@ -121,7 +121,8 @@ class Session:
             from .scripted import ScriptedSession
             self.runner = ScriptedSession(self.store, self.bus)
         elif mode == "replay":
-            self.runner = ReplaySession(load_recording(find_recording(recording)), self.bus, float(os.getenv("REPLAY_SPEED", "1")))
+            self.runner = ReplaySession(load_recording(find_recording(recording)), self.bus,
+                                        min(max(speed or float(os.getenv("REPLAY_SPEED", "1")), 0.5), 4))
         else:
             raise HTTPException(400, "mode must be live, scripted or replay")
         self.bus.emit("session", session_id=self.id, gateway=self.store.gateway.mode)
@@ -176,6 +177,7 @@ def get(sid: str) -> Session:
 class NewSession(BaseModel):
     mode: str = "replay"
     recording: str | None = None
+    speed: float | None = None      # replay pacing; the UI sends 2 for ?pace=fast
 
 
 class Message(BaseModel):
@@ -196,7 +198,7 @@ def health() -> dict:
 
 @app.post("/api/sessions")
 def new_session(body: NewSession) -> dict:
-    s = Session(body.mode, body.recording)
+    s = Session(body.mode, body.recording, body.speed)
     SESSIONS[s.id] = s
     return {"session_id": s.id, "mode": s.mode}
 

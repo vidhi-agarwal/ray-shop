@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAY Shop, product note</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=TASA+Orbiter:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --navy: #0B1F44; --body: #2A3448; --blue: #305EFF; --muted: #6B7385; --tint: #F0F4FF; --rule: #D9DEEA; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { width: 210mm; padding: 12mm 17.6mm 2mm; font: 9pt/1.38 Inter, Arial, sans-serif; color: var(--body);
+    border-top: 5px solid #C9D7FF; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h1 { font-family: "TASA Orbiter", Inter, sans-serif; font-weight: 700; font-size: 25pt; line-height: 1.05; color: var(--navy); margin: 0; letter-spacing: -0.01em; }
+  .sub { font-size: 10.5pt; color: var(--body); margin: 5px 0 8px; }
+  .byline { display: flex; gap: 22px; font-size: 8pt; color: var(--muted); padding-bottom: 5px; border-bottom: 1.5px solid var(--rule); margin-bottom: 8px; }
+  .byline b { color: var(--muted); font-weight: 600; }
+  a { color: var(--blue); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--blue); }
+  h2 { font-size: 10.5pt; font-weight: 600; color: var(--blue); margin: 10px 0 3px; }
+  p { margin: 0 0 5px; }
+  b, strong { color: var(--navy); font-weight: 600; }
+  .box { background: var(--tint); padding: 5px 10px 1px 14px; margin: 5px 0 6px 10px; }
+  ul { margin: 2px 0 6px; padding: 0; list-style: none; }
+  li { position: relative; padding-left: 13px; margin-bottom: 4px; }
+  li::before { content: ""; position: absolute; left: 2px; top: 0.52em; width: 4.5px; height: 4.5px; border-radius: 50%; background: var(--blue); }
+  .foot { font-size: 7pt; font-style: italic; color: var(--muted); margin: 6px 0 0; }
+</style>
+</head>
+<body>
+  <h1>RAY Shop</h1>
+  <div class="sub">A shop inside WhatsApp for home sellers with no website, so they start on Razorpay on day one.</div>
+  <div class="byline">
+    <span><b>Vidhi Agarwal</b></span>
+    <span>13 October 2026</span>
+    <span>Live prototype: <a href="https://ray-shop.vercel.app">ray-shop.vercel.app</a></span>
+    <span>Code: <a href="https://github.com/vidhi-agarwal/ray-shop">github.com/vidhi-agarwal/ray-shop</a></span>
+  </div>
+
+  <h2>The problem</h2>
+  <p>Home sellers run real businesses from Instagram DMs and WhatsApp: bakers, tiffin services, resellers. Every order is a chat. The seller prices it by hand, takes UPI, and a screenshot is her only proof of payment. <strong>Free UPI gives her money in the bank and nothing else, so she never needs Razorpay.</strong></p>
+  <p>Razorpay meets sellers like her only once they are big enough to build a website, and by then they have learned to do without it.</p>
+
+  <h2>How we know it is real</h2>
+  <p>A Razorpay PM reviewed my first idea and pointed me here: help sellers with no storefront start on Razorpay, so it is already in their stack when they grow. He also warned that kirana ideas fail because UPI is free and Razorpay charges a fee. RAY on WhatsApp (launched 2 September 2026) sends payment links, refunds and settlement updates to existing merchants but has no shop or order layer, and individuals can already onboard with PAN, Aadhaar and a bank account. The workaround costs money: one fake ₹1,320 screenshot loses as much as the 2% fee on ₹66,000 of sales. I have not yet shown it to real sellers; that is the first test.</p>
+
+  <h2>Who it is for, and what I built</h2>
+  <p>RAY Shop is for home businesses with no website. The seller forwards messages to RAY on WhatsApp and approves; RAY does the rest. It builds a shop page from a photo of her menu, turns a Hinglish DM into a priced order and a Razorpay payment link, checks every “paid” screenshot against Razorpay, reminds only the customers who owe, sends offers only to customers who opted in, and shows what sells and when she is ready for Payment Pages, Checkout and Capital.</p>
+  <div class="box">
+    <p><b>In the prototype, on made-up data. Meera’s Bakes</b> is a home baker in Bengaluru with 70 customers and one oven. Over three months ₹2.29 lakh flows through Razorpay links, ₹80,210 of it paid after a RAY reminder.</p>
+    <p>Riya’s DM, “2 box red velvet Saturday 6 baje, ek eggless”, becomes a ₹1,180 link she pays. Arjun’s fake ₹1,320 screenshot is caught before Meera bakes. The hosted demo replays one recorded live run of Claude, in one click.</p>
+  </div>
+  <p><b>Why it matters to Razorpay.</b> Every rupee goes through Razorpay from her first order, which free UPI never does, and her sales history makes her ready for Payment Pages, Checkout and Capital. Razorpay grows with her instead of meeting her later.</p>
+  <p><b>What I left out.</b> Real WhatsApp integration, which is simulated here; AI that sets prices or discounts; sending anything without the seller’s approval; delivery and inventory; a second persona; and pricing for tiny sellers, which is Razorpay’s call.</p>
+
+  <h2>Decisions and trade-offs</h2>
+  <ul>
+    <li><b>Let Claude read, and code decide the money.</b> Claude reads Hinglish DMs, menu photos and screenshots. Prices, delivery fees, the 50% advance, notice and oven capacity come from rules, and the model passes a quote ID, never an amount. The cost: a new rule needs code, not a prompt.</li>
+    <li><b>A screenshot never confirms a payment.</b> Only Razorpay’s record does. It is slower for honest customers and safe for the seller.</li>
+    <li><b>The seller approves anything a customer sees.</b> Every link, message and offer waits for one tap on an approval card. It adds a step, on purpose.</li>
+    <li><b>Every rupee in a message is checked.</b> Amounts must match the menu or that customer’s own order. My first version checked the whole ledger and let a wrong ₹500 through; a test caught it.</li>
+    <li><b>One persona, told in depth.</b> A second would need its own recorded run and would add no new Razorpay point.</li>
+  </ul>
+
+  <h2>How we will know it works</h2>
+  <p><b>Primary metric:</b> the share of a new seller’s order value collected through Razorpay links in her first 30 days, against what she still takes outside. Guardrails: no wrong amount ever sent, and nothing marked paid without Razorpay’s record.</p>
+  <p><b>What I would test next:</b> put three to five home sellers on a WhatsApp Business number for two weeks, run their real Hinglish DMs through the eval (11 of 11 today, on a small synthetic set), test fee tolerance with Razorpay, and tag orders to the offer that brought them.</p>
+
+  <p class="foot">All seller and customer data in the prototype is made up. Built with Claude Code and the Claude Agent SDK.</p>
+</body>
+</html>

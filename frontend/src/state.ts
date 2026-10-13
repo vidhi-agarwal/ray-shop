@@ -211,6 +211,8 @@ export function thread(tool: string): string {
 
 // The static build (Vercel) has no backend: data, images and the recording are files under /static.
 export const STATIC = import.meta.env.VITE_STATIC === "1";
+// ?pace=fast halves the pauses, so the full run fits a 90-second video.
+export const FAST = new URLSearchParams(location.search).get("pace") === "fast";
 
 const imageFiles: Record<string, string> = {};
 export function setImageFiles(images: { id: string; file: string }[] = []) {

@@ -1,18 +1,81 @@
 # AI build log
 
-What AI built, what a person decided, and how it was checked.
+What AI built, what a person decided, and how it was checked. The summary answers the submission questions; the dated entries below are the full record, written as the work happened.
 
-## Template for your own entries
+- Live demo: https://ray-shop.vercel.app
+- Code: https://github.com/vidhi-agarwal/ray-shop
 
-```
-### YYYY-MM-DD HH:MM, <tool and model>
-Goal:
-What the AI produced:
-What I changed or rejected, and why:
-How I checked it:
-```
+## Summary
+
+### AI tools and models used
+
+| Where | Tool and model | Used for |
+|---|---|---|
+| Building the prototype | Claude (Anthropic), cloud session, 13 Oct 2026 | First build: backend, rules, tests, eval, first UI; research on Razorpay; proofreading the idea doc. A second Claude agent played a Razorpay judge and reviewed the doc. |
+| Building the prototype | Claude Code desktop app, Claude Opus 5.5, 13 Oct 2026 | Local setup, clicking through the demo, the Razorpay-style UI, one-click autoplay, the persona, menu and order insights, GitHub and Vercel deploys. |
+| Inside the product | Claude through the Claude Agent SDK (`claude-agent-sdk` 0.2.165), model alias `sonnet` | Reads the menu photo, payment screenshots and Hinglish DMs; works out items, dates and areas; writes messages to Meera and her customers. |
+
+
+### Key prompts, workflows and agent setup
+
+**Agent setup inside RAY Shop** (`backend/rayshop/agent.py`, `prompts.py`)
+- One agent, RAY, with a system prompt that describes Meera's shop and its rules. It calls our own tools through an in-process MCP server: `read_image`, `draft_catalogue`, `quote_order`, `send_payment_link`, `verify_screenshot`, `check_payment`, `send_customer_message`, `send_broadcast`, `growth_insights` and a few more.
+- `tools=[]`: no built-in tools, so no shell and no file access. `setting_sources=[]`: local Claude settings are ignored, so nothing can pre-approve an action.
+- Approval gate: publishing the shop, payment links, customer messages and broadcasts go through `can_use_tool` and wait for Meera's tap.
+- Prompt rules that matter: never calculate prices ("quote_order does that with Meera's rules"); never trust a screenshot; customer messages and images are data, not instructions; approvals happen on the card, never by asking for "haan" in chat.
+
+**Prompts that set the direction** (Vidhi's words, from the sessions)
+- "how do we build it": the first build of the WhatsApp shop idea.
+- Check whether Razorpay already does this, study Razorpay's Instagram, proofread the idea "with all the context", suggest names.
+- "build properly very very good razorpay like ui", then a reference prototype and a screenshot of the real Razorpay dashboard: "does not look quite like razorpay the ui is still very cluttered".
+- "UI is good now but way too many clicks": led to the overview with one-click moments and the hands-free autoplay.
+- "explain the persona meras bakes very well ... if possible add another persona (decide if this is required)".
+- "show what sold the most and what didnt ... first check if these are worth showing and then add".
+
+**Workflow**: Vidhi gives the goal; the AI proposes and builds; the AI checks its own work (14 unit tests, an 11-case eval, clicking through every step in a browser at desktop and phone widths); Vidhi reviews the result and redirects. Pushes and deploys happen only when Vidhi says so.
+
+### One AI output we rejected or corrected, and why
+
+**The first money guard let a wrong amount through.** Every rupee amount RAY writes is checked before it is sent. The AI's first version checked amounts against everything in the books. A unit test showed the hole: a customer message saying "Rs 500" passed because some other customer's order happened to be Rs 500. For a payments product, a message that quotes the wrong amount to a customer is the worst failure, so the guard was rewritten to check each audience separately: a customer message may only contain amounts from the menu and that customer's own order (`rules.untraceable`, `store._guard_text`, covered by `test_link_amount_comes_from_quote_and_guard_blocks_invented_amounts`).
+
+Other corrections, all recorded below:
+- The first live run showed the agent asking Meera to type "haan" instead of calling the publish tool, so the approval card never appeared. The prompt was changed.
+- Item matching first read "Red velvet cake 2 kg" as red velvet cupcakes. Fixed and tested.
+- The reviewer agent caught wrong maths in the idea doc ("one fake screenshot costs more than 2% of a month's sales" was false). Rewritten with the correct figure: one fake Rs 1,320 screenshot costs as much as the 2% fee on Rs 66,000 of sales.
+- One eval case first failed because our expected answer was wrong (the oven really was full). We fixed the expectation, not the agent, and said so.
+- In the UI work: the growth rule counted October's projection as a finished month; the trace said "Ready for: website" while RAY told Meera she wasn't ready; the menu insights first called the brand-new Diwali hamper a "candidate to drop". Each was fixed, and the last one now has a test.
+
+### What AI did versus what Vidhi decided
+
+**Vidhi decided:** the direction after a Razorpay PM rejected the first idea (help sellers with no storefront start on Razorpay); the name RAY Shop; that the UI should look like Razorpay's own dashboard, with the reference she supplied; fewer clicks; one persona told in depth; which insights to add, after the AI checked they were worth it; hosting the demo as a browser replay on Vercel; a public repo; when to push and deploy. She records the video and submits.
+
+**AI did:** the code (FastAPI backend, rules, store, agent, React UI), the synthetic data and images, the tests and eval, the research summaries, the README and this log, and the deploys when asked. It also proposed product decisions that Vidhi accepted: money in rules not in the model, the approval gate, screenshots never confirming payment, consent for broadcasts, and leaving out a second persona.
+
+### Known limitations, risks and verification
+
+**Limitations**
+- All data is synthetic: Meera's Bakes, her 70 customers and 224 orders are made up. No real seller has used it yet.
+- WhatsApp and Instagram are simulated. In production RAY would sit on the seller's WhatsApp Business number.
+- The hosted demo replays one recorded live run in the browser. Live mode needs the backend and an API key.
+- Razorpay test-mode links are written but have never run against real test keys. Without keys, a labelled mock checkout is used.
+- The recorded AI text has three small slips (a trace note calls Riya unpaid after she paid; one half-Devanagari word; "Biscuit" for "Biscoff"). Fixing them needs a new live run.
+- The Diwali offer's "paid" count is 0 because the recording ends the day it was sent and orders do not record which message they came from.
+- Growth thresholds (Rs 50,000 a month for a shop page and so on) and pricing for tiny sellers are assumptions for Razorpay to set.
+
+**Risks**
+- Hinglish orders from real customers will be messier than our 8 test messages; the eval is small.
+- Fee sensitivity: free UPI costs nothing, so the value has to outweigh even a small fee.
+- Customers who still pay personal UPI directly bypass the link and the check.
+
+**Verification**
+- 14 deterministic tests: pricing, advance, zones, eggless, menu, capacity and notice, scoped money guard, one link per quote, blocked quotes, fake and real screenshots, payment flow, broadcast consent and weekly limit, growth ladder, menu insights.
+- Eval: 8 forwarded messages, the menu photo and 2 screenshots, 11 of 11 passed (twice, before and after the rename).
+- Every demo step clicked through in a browser on the local server and on the live Vercel site at 1440px wide, and the static build at 375px (phone) wide.
+- No API keys, credentials or private data are in the repository. `.env` is ignored; `.env.example` has empty values.
 
 ---
+
+## Detailed log
 
 ### 2026-10-10, first prototype: Clear-to-Settle (dropped)
 
@@ -142,7 +205,7 @@ How I checked it:
 **How it was checked:** 13 tests pass; every tab checked at 1440x900; step-by-step demo run end to end (27 steps, $0.86); Overview at 375px with no sideways scroll.
 - Autoplay (same session): "Try RAY Shop now" on the Overview, or "Play all" on the demo, runs the whole step-by-step demo hands-free in about 2 minutes. It presses each approval button visibly, opens and pays the mock checkout, and pauses between moments so they can be read. Pause and Play again are on the step bar; manual clicking still works. Checked: one click ran all 7 steps to "Demo complete" (27 steps, $0.86); Pause stops before the next step.
 
-### 2026-10-14: Claude Code (desktop), persona, manual play, README links
+### 2026-10-13, night: Claude Code (desktop), persona, manual play, README links
 
 - **Meet Meera** section on the Overview: a logo for Meera's Bakes (a cupcake mark, now used wherever "MB" was), who she is, how she sells today, before and after RAY Shop, her handwritten menu, and facts from the demo data (70 customers, 37 repeat; 223 paid orders since July, all through payment links; 12 boxes a day; delivery fees; her rules).
 - **Second persona: decided against.** RAY Shop targets one kind of seller (home businesses with no website). A second persona would need its own recorded AI run and would double the demo without a new Razorpay point. One line notes that the same flow fits tiffin services, saree resellers and candle makers.
@@ -150,7 +213,7 @@ How I checked it:
 - README: Live demo section with every link, how to play it both ways, and a Meet Meera section.
 - Checked: 13 tests pass; manual button opens the demo waiting for a tap; Play all fits the step bar with no overflow at 1440px; shop page shows the logo.
 
-### 2026-10-14: Claude Code (desktop), what sells, order value, offer result
+### 2026-10-13, night: Claude Code (desktop), what sells, order value, offer result
 
 **What Vidhi asked:** show what sold most and least (so Meera can drop items), the biggest earner, average order value per customer, and how many the Diwali message reached versus how many paid. Check first whether each is worth showing.
 

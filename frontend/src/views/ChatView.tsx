@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { APPROVAL_LABEL, ChatMsg, LADDER, SellerItem, State, TOOL_LABEL, TraceItem, imageSrc, imageUrl, inr, niceDate, packLabel, thread } from "../state";
+import { APPROVAL_LABEL, ChatMsg, FAST, LADDER, SellerItem, State, TOOL_LABEL, TraceItem, imageSrc, imageUrl, inr, niceDate, packLabel, thread } from "../state";
 import {
   IconBack, IconBank, IconBolt, IconCamera, IconCard, IconChat, IconCheck, IconClock, IconForward, IconLock, IconPlay,
   IconSend, IconShield, IconWallet, IconWarn, MeeraLogo, RayMark,
@@ -13,7 +13,9 @@ type Props = {
 };
 
 // Autoplay pacing: time to read each moment before the next click happens on its own.
-const AUTO = { firstStep: 500, nextStep: 2800, afterSkip: 1800, press: 1500, approve: 450, openPay: 1500, submitPay: 1600 };
+const PACE = FAST ? 0.5 : 1;
+const AUTO = Object.fromEntries(Object.entries({ firstStep: 500, nextStep: 2800, afterSkip: 1800, press: 1500, approve: 450, openPay: 1500, submitPay: 1600 })
+  .map(([k, v]) => [k, Math.max(300, Math.round(v * PACE))])) as Record<"firstStep" | "nextStep" | "afterSkip" | "press" | "approve" | "openPay" | "submitPay", number>;
 
 const FWD = /^\[Forwarded from ([^,\]]+),?\s*([^\]]*)\]\n?([\s\S]*)$/;
 export const clean = (t: string) => t.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#+\s/gm, "");
@@ -387,8 +389,8 @@ function Checkout({ amount, customer, onPaid, onClose, auto }: { id: string; amo
   }, []);
   const submit = () => {
     setStage("processing");
-    timers.current.push(window.setTimeout(() => { onPaid(); setStage("success"); }, 1300));
-    timers.current.push(window.setTimeout(onClose, 3200));
+    timers.current.push(window.setTimeout(() => { onPaid(); setStage("success"); }, Math.round(1300 * PACE)));
+    timers.current.push(window.setTimeout(onClose, Math.round(3200 * PACE)));
   };
   const methods = [
     { id: "upi", label: "UPI", sub: "Google Pay, PhonePe, Paytm and more", icon: <IconBolt size={18} /> },

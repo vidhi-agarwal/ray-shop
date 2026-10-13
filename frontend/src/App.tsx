@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
-import { Ev, Moment, STATIC, State, buildStory, initial, niceDate, parseJsonl, reduce } from "./state";
+import { Ev, FAST, Moment, STATIC, State, buildStory, initial, niceDate, parseJsonl, reduce } from "./state";
 import { LocalReplay } from "./replay";
 import ChatView from "./views/ChatView";
 import OrdersView from "./views/OrdersView";
@@ -99,11 +99,11 @@ export default function App() {
         // No backend: play the recorded live run in the browser, with the same pauses as the server's replay.
         const [view, text] = await Promise.all([getJson(INITIAL_URL), fetch("/static/demo.jsonl").then((r) => r.text())]);
         const events = text.split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
-        local.current = new LocalReplay(events, view, (e) => dispatch(e));
+        local.current = new LocalReplay(events, view, (e) => dispatch(e), FAST ? 2 : 1);
         setSid("static");
         return "static";
       }
-      const { session_id } = await post("/api/sessions", { mode });
+      const { session_id } = await post("/api/sessions", { mode, speed: FAST ? 2 : undefined });
       setSid(session_id);
       const src = new EventSource(`/api/sessions/${session_id}/events`);
       src.onmessage = (m) => dispatch(JSON.parse(m.data) as Ev);
